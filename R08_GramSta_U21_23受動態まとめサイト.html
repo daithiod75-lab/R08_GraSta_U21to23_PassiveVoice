@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>受動態（Passive Voice）マスターガイド</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans JP', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- Header / Navigation Bar -->
+  <header class="border-b border-slate-200 bg-white sticky top-0 z-50 shadow-sm" id="header-nav">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3 cursor-pointer" onclick="switchMainPage('concept')">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-600 to-emerald-600 flex items-center justify-center font-black text-xl text-white shadow-md">
+          P
+        </div>
+        <div>
+          <h1 class="font-bold text-lg text-slate-900 leading-tight" id="header-title" data-i18n="header-title">受動態マスターガイド</h1>
+          <p class="text-xs text-slate-500" id="header-subtitle" data-i18n="header-sub">Passive Voice Multi-Page Interactive Hub</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <!-- Language Toggle Button -->
+        <button onclick="toggleLanguage()" id="lang-toggle" class="p-2.5 rounded-xl bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-200 transition flex items-center gap-2 text-xs font-bold shadow-sm">
+          <i class="fa-solid fa-globe text-sm text-teal-600"></i>
+          <span id="lang-text">English</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section Page Tabs Navigation -->
+    <div class="bg-slate-100 border-t border-slate-200 overflow-x-auto">
+      <div class="max-w-6xl mx-auto px-4 flex space-x-1 py-1.5 text-xs font-bold" id="nav-tabs">
+        <button onclick="switchMainPage('concept')" id="tab-btn-concept" class="px-3.5 py-2 rounded-xl transition whitespace-nowrap bg-teal-600 text-white shadow-sm">
+          <i class="fa-solid fa-lightbulb mr-1"></i> <span data-i18n="nav-1">1. 基本イメージ</span>
+        </button>
+        <button onclick="switchMainPage('tenses')" id="tab-btn-tenses" class="px-3.5 py-2 rounded-xl transition whitespace-nowrap text-slate-700 hover:bg-slate-200">
+          <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> <span data-i18n="nav-2">2. 時制の魔法</span>
+        </button>
+        <button onclick="switchMainPage('extra')" id="tab-btn-extra" class="px-3.5 py-2 rounded-xl transition whitespace-nowrap text-slate-700 hover:bg-slate-200">
+          <i class="fa-solid fa-puzzle-piece mr-1"></i> <span data-i18n="nav-3">3. 追加情報と前置詞</span>
+        </button>
+        <button onclick="switchMainPage('verb-bank')" id="tab-btn-verb-bank" class="px-3.5 py-2 rounded-xl transition whitespace-nowrap text-slate-700 hover:bg-slate-200">
+          <i class="fa-solid fa-book-bookmark mr-1"></i> <span data-i18n="nav-4">4. 動詞・過去分詞バンク</span>
+        </button>
+        <button onclick="switchMainPage('questions-sec')" id="tab-btn-questions-sec" class="px-3.5 py-2 rounded-xl transition whitespace-nowrap text-slate-700 hover:bg-slate-200">
+          <i class="fa-solid fa-circle-question mr-1"></i> <span data-i18n="nav-5">5. 受動態＆質問</span>
+        </button>
+        <button onclick="switchMainPage('practice')" id="tab-btn-practice" class="px-3.5 py-2 rounded-xl transition whitespace-nowrap text-slate-700 hover:bg-slate-200">
+          <i class="fa-solid fa-pen-to-square mr-1"></i> <span data-i18n="nav-6">6. 練習問題</span>
+        </button>
+        <button onclick="switchMainPage('svoo-svoc-sec')" id="tab-btn-svoo-svoc-sec" class="px-3.5 py-2 rounded-xl transition whitespace-nowrap text-slate-700 hover:bg-slate-200">
+          <i class="fa-solid fa-diagram-project mr-1"></i> <span data-i18n="nav-7">7. 文型＆受動態(SVOO/SVOC)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
+
+    <!-- PAGE 1: CONCEPT -->
+    <section id="page-concept" class="space-y-8 page-view">
+      <!-- Hero Card -->
+      <div class="bg-gradient-to-br from-teal-800 via-emerald-800 to-indigo-900 border border-teal-700/40 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden shadow-xl text-white">
+        <div class="inline-block px-4 py-1.5 rounded-full bg-white/15 border border-white/20 text-teal-100 font-bold text-xs tracking-widest uppercase mb-4" data-i18n="hero-tag">
+          LESSON GUIDE FOR STUDENTS
+        </div>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight" id="hero-title">
+          「受動態」は <span class="text-amber-300 underline underline-offset-8">be動詞を変えるだけ</span>！
+        </h2>
+        <p class="text-slate-100 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8" data-i18n="hero-desc">
+          難しく考える必要はありません。主役（モノ）を最初におき、動作を受ける公式を覚えるだけで、あらゆる時制の受動態を完璧にマスターできます。
+        </p>
+        
+        <!-- Core Formula Card -->
+        <div class="bg-white/95 border border-slate-200 text-slate-900 rounded-2xl p-6 max-w-3xl mx-auto shadow-xl">
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3" data-i18n="formula-title">基本の公式</div>
+          <div class="flex flex-wrap items-center justify-center gap-3 text-lg md:text-2xl font-black">
+            <span class="px-4 py-2 rounded-xl bg-teal-100 text-teal-900 border border-teal-300" data-i18n="f-thing">【モノ】</span>
+            <span class="text-slate-400">+</span>
+            <span class="px-4 py-2 rounded-xl bg-amber-100 text-amber-900 border border-amber-300" data-i18n="f-be">【be動詞】</span>
+            <span class="text-slate-400">+</span>
+            <span class="px-4 py-2 rounded-xl bg-emerald-100 text-emerald-900 border border-emerald-300" data-i18n="f-pp">【過去分詞】</span>
+            <span class="text-slate-400">+</span>
+            <span class="px-4 py-2 rounded-xl bg-indigo-100 text-indigo-900 border border-indigo-300" data-i18n="f-extra">【追加情報】</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="border-l-4 border-teal-600 pl-4">
+          <h3 class="text-2xl font-bold text-slate-900" data-i18n="sec1-title">1. 受動態のスタート地点（主役の交代）</h3>
+          <p class="text-slate-500 text-sm" data-i18n="sec1-sub">Action comes to the THING</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Active -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="text-xs font-bold text-slate-400 mb-2" data-i18n="act-label">能動態 (通常の文)</div>
+              <div class="text-2xl font-bold text-slate-800 mb-4" data-i18n="act-ex">🐱 猫が 🐟 魚を食べた。</div>
+              <p class="text-slate-600 text-sm leading-relaxed" data-i18n="act-desc">
+                「猫」が主語で、自分から行動を起こしています。
+              </p>
+            </div>
+            <div class="mt-6 p-4 rounded-xl bg-slate-100 text-teal-800 font-mono text-sm border border-slate-200 font-bold">
+              The cat ate the fish.
+            </div>
+          </div>
+
+          <!-- Passive -->
+          <div class="bg-teal-50/80 border border-teal-200 rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden shadow-sm">
+            <div class="absolute top-3 right-3 px-3 py-1 bg-teal-700 text-white rounded-full text-xs font-bold" data-i18n="pass-badge">受動態</div>
+            <div>
+              <div class="text-xs font-bold text-teal-800 mb-2" data-i18n="pass-label">受動態 (受ける文)</div>
+              <div class="text-2xl font-bold text-slate-900 mb-4" data-i18n="pass-ex">🐟 魚が 🐱 猫に食べられた。</div>
+              <p class="text-slate-700 text-sm leading-relaxed" data-i18n="pass-desc">
+                アクションを<b>受けたモノ（目的語）</b>が主役になって文章がスタートします！
+              </p>
+            </div>
+            <div class="mt-6 p-4 rounded-xl bg-white text-slate-900 font-mono text-sm border border-teal-300 font-bold shadow-inner">
+              The fish <span class="text-amber-700 underline">was</span> <span class="text-emerald-700 underline">eaten</span> by the cat.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex justify-end pt-4">
+        <button onclick="switchMainPage('tenses')" class="px-5 py-2.5 bg-teal-600 text-white text-xs font-bold rounded-xl hover:bg-teal-700 transition flex items-center gap-2">
+          <span>次へ: 2. 時制の魔法</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 2: TENSES -->
+    <section id="page-tenses" class="space-y-6 page-view hidden">
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h3 class="text-2xl font-bold text-slate-900" data-i18n="sec2-title">2. 時制の魔法（be動詞の役割）</h3>
+        <p class="text-slate-500 text-sm" data-i18n="sec2-sub">Past Participle stays the SAME. Only change the BE-VERB!</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 leading-relaxed text-slate-700 space-y-4 shadow-sm">
+        <p data-i18n="sec2-p1">
+          受動態で最も大切なポイントは、<b>「時制（いつの話か）」を表現するのは全て be動詞 の仕事</b>だということです。
+        </p>
+        <p data-i18n="sec2-p2">
+          動作を表す<b>【過去分詞】の形はずっと同じ</b>のまま！be動詞を変えるだけで、どんな時制も自由自在に作ることができます。
+        </p>
+      </div>
+
+      <!-- Tense Table -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-100 text-slate-600 uppercase text-xs border-b border-slate-200">
+            <tr>
+              <th class="py-4 px-6 font-bold" data-i18n="th-tense">時制 (Tense)</th>
+              <th class="py-4 px-6 font-bold" data-i18n="th-be">be動詞の形</th>
+              <th class="py-4 px-6 font-bold" data-i18n="th-ex">例文</th>
+              <th class="py-4 px-6 font-bold" data-i18n="th-meaning">意味</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-800">
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-4 px-6 font-bold text-teal-700" data-i18n="t-pres">現在 (Present)</td>
+              <td class="py-4 px-6 font-mono text-amber-800 font-bold">is / are</td>
+              <td class="py-4 px-6 font-mono">English <span class="text-amber-700 font-bold">is</span> spoken.</td>
+              <td class="py-4 px-6" data-i18n="tm-pres">英語は話されている（日常・事実）</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-4 px-6 font-bold text-teal-700" data-i18n="t-past">過去 (Past)</td>
+              <td class="py-4 px-6 font-mono text-amber-800 font-bold">was / were</td>
+              <td class="py-4 px-6 font-mono">The car <span class="text-amber-700 font-bold">was</span> repaired.</td>
+              <td class="py-4 px-6" data-i18n="tm-past">車は修理された（過去のこと）</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-4 px-6 font-bold text-teal-700" data-i18n="t-fut">未来 (Future)</td>
+              <td class="py-4 px-6 font-mono text-amber-800 font-bold">will be</td>
+              <td class="py-4 px-6 font-mono">The match <span class="text-amber-700 font-bold">will be</span> held.</td>
+              <td class="py-4 px-6" data-i18n="tm-fut">試合は開催されるだろう</td>
+            </tr>
+            <tr class="bg-emerald-50/60 hover:bg-emerald-50 transition">
+              <td class="py-4 px-6 font-bold text-emerald-800" data-i18n="t-pres-prog">現在進行形 (Present Progressive)</td>
+              <td class="py-4 px-6 font-mono text-amber-800 font-bold">is being / are being</td>
+              <td class="py-4 px-6 font-mono">My car <span class="text-amber-700 font-bold">is being</span> repaired.</td>
+              <td class="py-4 px-6 text-emerald-900 font-semibold" data-i18n="tm-pres-prog">車は今、修理されているところだ</td>
+            </tr>
+            <tr class="bg-emerald-50/60 hover:bg-emerald-50 transition">
+              <td class="py-4 px-6 font-bold text-emerald-800" data-i18n="t-past-prog">過去進行形 (Past Progressive)</td>
+              <td class="py-4 px-6 font-mono text-amber-800 font-bold">was being / were being</td>
+              <td class="py-4 px-6 font-mono">The bridge <span class="text-amber-700 font-bold">was being</span> built.</td>
+              <td class="py-4 px-6 text-emerald-900 font-semibold" data-i18n="tm-past-prog">橋は当時、建設されているところだった</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-4 px-6 font-bold text-indigo-700" data-i18n="t-pres-perf">現在完了形 (Present Perfect)</td>
+              <td class="py-4 px-6 font-mono text-amber-800 font-bold">has been / have been</td>
+              <td class="py-4 px-6 font-mono">The work <span class="text-amber-700 font-bold">has been</span> done.</td>
+              <td class="py-4 px-6" data-i18n="tm-pres-perf">仕事は完了した（すでに終わった）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flex justify-between pt-4">
+        <button onclick="switchMainPage('concept')" class="px-5 py-2.5 bg-slate-200 text-slate-800 text-xs font-bold rounded-xl hover:bg-slate-300 transition flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left"></i> <span>前へ: 1. 基本イメージ</span>
+        </button>
+        <button onclick="switchMainPage('extra')" class="px-5 py-2.5 bg-teal-600 text-white text-xs font-bold rounded-xl hover:bg-teal-700 transition flex items-center gap-2">
+          <span>次へ: 3. 追加情報と前置詞</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 3: EXTRA INFORMATION & PREPOSITIONS -->
+    <section id="page-extra" class="space-y-6 page-view hidden">
+      <div class="border-l-4 border-indigo-600 pl-4">
+        <h3 class="text-2xl font-bold text-slate-900" data-i18n="sec3-title">3. 追加情報（オマケ情報）と前置詞</h3>
+        <p class="text-slate-500 text-sm" data-i18n="sec3-sub">Connecting details with prepositions</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 text-slate-700 shadow-sm">
+        <p data-i18n="sec3-p1">
+          <b>【モノ ＋ be動詞 ＋ 過去分詞】</b> の3つが揃えば、文の骨組み（メイン）は完成です。
+        </p>
+        <p data-i18n="sec3-p2">
+          そのあとに続くのはすべて<b>「追加情報」</b>です。追加情報を過去分詞にくっつける橋渡しの役割をするのが<b>前置詞</b>です。
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-indigo-700 uppercase" data-i18n="prep-who-head">誰によって？</span>
+            <div class="text-lg font-bold font-mono text-slate-900 mt-1">by + 人 / 団体</div>
+            <div class="text-xs text-slate-500 mt-2" data-i18n="prep-who-ex">例: by a lot of people</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-indigo-700 uppercase" data-i18n="prep-where-head">どこで？</span>
+            <div class="text-lg font-bold font-mono text-slate-900 mt-1">in / at / all over</div>
+            <div class="text-xs text-slate-500 mt-2" data-i18n="prep-where-ex">例: all over the world</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-indigo-700 uppercase" data-i18n="prep-when-head">いつ？</span>
+            <div class="text-lg font-bold font-mono text-slate-900 mt-1">in / at / now</div>
+            <div class="text-xs text-slate-500 mt-2" data-i18n="prep-when-ex">例: in 1998 / right now</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sentence Dismantling Example -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm">
+        <div class="text-xs font-bold text-slate-500 uppercase tracking-widest" data-i18n="dismantle-title">文章の分解例</div>
+        
+        <div class="text-xl md:text-2xl font-mono font-bold text-slate-900 leading-relaxed">
+          <span class="text-teal-700">The old buildings</span> 
+          <span class="text-amber-700">were being</span> 
+          <span class="text-emerald-700">demolished</span> 
+          <span class="text-indigo-700">in 1998</span>.
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs pt-2">
+          <div class="bg-teal-50 border border-teal-200 p-3 rounded-lg text-teal-900 font-bold" data-i18n="d-thing">
+            <b>[モノ]</b> 古い建物
+          </div>
+          <div class="bg-amber-50 border border-amber-200 p-3 rounded-lg text-amber-900 font-bold" data-i18n="d-be">
+            <b>[be動詞]</b> 過去進行形 (最中だった)
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 p-3 rounded-lg text-emerald-900 font-bold" data-i18n="d-pp">
+            <b>[過去分詞]</b> 解体する
+          </div>
+          <div class="bg-indigo-50 border border-indigo-200 p-3 rounded-lg text-indigo-900 font-bold" data-i18n="d-extra">
+            <b>[追加情報]</b> 1998年に (前置詞 in)
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-between pt-4">
+        <button onclick="switchMainPage('tenses')" class="px-5 py-2.5 bg-slate-200 text-slate-800 text-xs font-bold rounded-xl hover:bg-slate-300 transition flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left"></i> <span>前へ: 2. 時制の魔法</span>
+        </button>
+        <button onclick="switchMainPage('verb-bank')" class="px-5 py-2.5 bg-teal-600 text-white text-xs font-bold rounded-xl hover:bg-teal-700 transition flex items-center gap-2">
+          <span>次へ: 4. 動詞・過去分詞バンク</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 4: VERB BANK -->
+    <section id="page-verb-bank" class="space-y-6 page-view hidden">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-l-4 border-teal-600 pl-4">
+        <div>
+          <h3 class="text-2xl font-bold text-slate-900" data-i18n="sec4-title">4. 動詞・過去分詞マスターバンク (UNIT 21~23より)</h3>
+          <p class="text-slate-500 text-sm" data-i18n="sec4-sub">Extracted Verb Reference List for Exercises</p>
+        </div>
+        <div class="relative w-full md:w-64">
+          <input type="text" id="verbSearch" onkeyup="filterVerbs()" placeholder="動詞を検索 (例: build, speak)..." class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2 text-sm text-slate-900 focus:outline-none focus:border-teal-600 font-sans shadow-sm">
+          <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-slate-400 text-xs"></i>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+        <div class="max-h-[500px] overflow-y-auto">
+          <table class="w-full text-left text-sm" id="verbTable">
+            <thead class="bg-slate-100 text-slate-600 uppercase text-xs sticky top-0 border-b border-slate-200">
+              <tr>
+                <th class="py-3.5 px-6 font-bold" data-i18n="vth-base">原形 (Base)</th>
+                <th class="py-3.5 px-6 font-bold" data-i18n="vth-past">過去形 (Past)</th>
+                <th class="py-3.5 px-6 text-emerald-700 font-bold" data-i18n="vth-pp">過去分詞 (V3)</th>
+                <th class="py-3.5 px-6 font-bold" data-i18n="vth-meaning">意味 (Meaning)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-800 font-mono text-xs md:text-sm">
+              <tr class="hover:bg-slate-50"><td>bear</td><td>bore</td><td class="text-emerald-700 font-bold">born</td><td class="font-sans text-slate-600">生む / 生まれる</td></tr>
+              <tr class="hover:bg-slate-50"><td>break</td><td>broke</td><td class="text-emerald-700 font-bold">broken</td><td class="font-sans text-slate-600">壊す・折る</td></tr>
+              <tr class="hover:bg-slate-50"><td>bring (up)</td><td>brought</td><td class="text-emerald-700 font-bold">brought (up)</td><td class="font-sans text-slate-600">育てあげる</td></tr>
+              <tr class="hover:bg-slate-50"><td>build</td><td>built</td><td class="text-emerald-700 font-bold">built</td><td class="font-sans text-slate-600">建てつける・建設する</td></tr>
+              <tr class="hover:bg-slate-50"><td>buy</td><td>bought</td><td class="text-emerald-700 font-bold">bought</td><td class="font-sans text-slate-600">買う</td></tr>
+              <tr class="hover:bg-slate-50"><td>catch</td><td>caught</td><td class="text-emerald-700 font-bold">caught</td><td class="font-sans text-slate-600">捕まえる</td></tr>
+              <tr class="hover:bg-slate-50"><td>close</td><td>closed</td><td class="text-emerald-700 font-bold">closed</td><td class="font-sans text-slate-600">閉める</td></tr>
+              <tr class="hover:bg-slate-50"><td>cover</td><td>covered</td><td class="text-emerald-700 font-bold">covered</td><td class="font-sans text-slate-600">覆う (be covered with)</td></tr>
+              <tr class="hover:bg-slate-50"><td>cut</td><td>cut</td><td class="text-emerald-700 font-bold">cut</td><td class="font-sans text-slate-600">切る・切り倒す</td></tr>
+              <tr class="hover:bg-slate-50"><td>discuss</td><td>discussed</td><td class="text-emerald-700 font-bold">discussed</td><td class="font-sans text-slate-600">議論する</td></tr>
+              <tr class="hover:bg-slate-50"><td>do</td><td>did</td><td class="text-emerald-700 font-bold">done</td><td class="font-sans text-slate-600">行う・終わらせる</td></tr>
+              <tr class="hover:bg-slate-50"><td>eat</td><td>ate</td><td class="text-emerald-700 font-bold">eaten</td><td class="font-sans text-slate-600">食べる</td></tr>
+              <tr class="hover:bg-slate-50"><td>elect</td><td>elected</td><td class="text-emerald-700 font-bold">elected</td><td class="font-sans text-slate-600">選出する</td></tr>
+              <tr class="hover:bg-slate-50"><td>excite</td><td>excited</td><td class="text-emerald-700 font-bold">excited</td><td class="font-sans text-slate-600">興奮させる</td></tr>
+              <tr class="hover:bg-slate-50"><td>fill</td><td>filled</td><td class="text-emerald-700 font-bold">filled</td><td class="font-sans text-slate-600">満たす (be filled with)</td></tr>
+              <tr class="hover:bg-slate-50"><td>find</td><td>found</td><td class="text-emerald-700 font-bold">found</td><td class="font-sans text-slate-600">発見する</td></tr>
+              <tr class="hover:bg-slate-50"><td>finish</td><td>finished</td><td class="text-emerald-700 font-bold">finished</td><td class="font-sans text-slate-600">終える</td></tr>
+              <tr class="hover:bg-slate-50"><td>give</td><td>gave</td><td class="text-emerald-700 font-bold">given</td><td class="font-sans text-slate-600">与える・あげる</td></tr>
+              <tr class="hover:bg-slate-50"><td>injure</td><td>injured</td><td class="text-emerald-700 font-bold">injured</td><td class="font-sans text-slate-600">怪我をさせる</td></tr>
+              <tr class="hover:bg-slate-50"><td>interest</td><td>interested</td><td class="text-emerald-700 font-bold">interested</td><td class="font-sans text-slate-600">興味を持たせる</td></tr>
+              <tr class="hover:bg-slate-50"><td>interview</td><td>interviewed</td><td class="text-emerald-700 font-bold">interviewed</td><td class="font-sans text-slate-600">インタビューする</td></tr>
+              <tr class="hover:bg-slate-50"><td>invent</td><td>invented</td><td class="text-emerald-700 font-bold">invented</td><td class="font-sans text-slate-600">発明する</td></tr>
+              <tr class="hover:bg-slate-50"><td>invite</td><td>invited</td><td class="text-emerald-700 font-bold">invited</td><td class="font-sans text-slate-600">招待する</td></tr>
+              <tr class="hover:bg-slate-50"><td>keep</td><td>kept</td><td class="text-emerald-700 font-bold">kept</td><td class="font-sans text-slate-600">〜の状態に保つ</td></tr>
+              <tr class="hover:bg-slate-50"><td>kill</td><td>killed</td><td class="text-emerald-700 font-bold">killed</td><td class="font-sans text-slate-600">命を奪う・亡くなる</td></tr>
+              <tr class="hover:bg-slate-50"><td>know</td><td>knew</td><td class="text-emerald-700 font-bold">known</td><td class="font-sans text-slate-600">知る・知られている</td></tr>
+              <tr class="hover:bg-slate-50"><td>leave</td><td>left</td><td class="text-emerald-700 font-bold">left</td><td class="font-sans text-slate-600">残す・〜のままにする</td></tr>
+              <tr class="hover:bg-slate-50"><td>lock</td><td>locked</td><td class="text-emerald-700 font-bold">locked</td><td class="font-sans text-slate-600">鍵をかける</td></tr>
+              <tr class="hover:bg-slate-50"><td>look (up to)</td><td>looked</td><td class="text-emerald-700 font-bold">looked (up to)</td><td class="font-sans text-slate-600">尊敬する</td></tr>
+              <tr class="hover:bg-slate-50"><td>love</td><td>loved</td><td class="text-emerald-700 font-bold">loved</td><td class="font-sans text-slate-600">愛する</td></tr>
+              <tr class="hover:bg-slate-50"><td>make</td><td>made</td><td class="text-emerald-700 font-bold">made</td><td class="font-sans text-slate-600">作る</td></tr>
+              <tr class="hover:bg-slate-50"><td>name</td><td>named</td><td class="text-emerald-700 font-bold">named</td><td class="font-sans text-slate-600">〜と名付ける</td></tr>
+              <tr class="hover:bg-slate-50"><td>paint</td><td>painted</td><td class="text-emerald-700 font-bold">painted</td><td class="font-sans text-slate-600">（絵を）描く</td></tr>
+              <tr class="hover:bg-slate-50"><td>please</td><td>pleased</td><td class="text-emerald-700 font-bold">pleased</td><td class="font-sans text-slate-600">喜ばせる</td></tr>
+              <tr class="hover:bg-slate-50"><td>raise</td><td>raised</td><td class="text-emerald-700 font-bold">raised</td><td class="font-sans text-slate-600">育てる</td></tr>
+              <tr class="hover:bg-slate-50"><td>repair</td><td>repaired</td><td class="text-emerald-700 font-bold">repaired</td><td class="font-sans text-slate-600">修理する</td></tr>
+              <tr class="hover:bg-slate-50"><td>return</td><td>returned</td><td class="text-emerald-700 font-bold">returned</td><td class="font-sans text-slate-600">返却する</td></tr>
+              <tr class="hover:bg-slate-50"><td>see</td><td>saw</td><td class="text-emerald-700 font-bold">seen</td><td class="font-sans text-slate-600">見る・見える</td></tr>
+              <tr class="hover:bg-slate-50"><td>sell</td><td>sold</td><td class="text-emerald-700 font-bold">sold</td><td class="font-sans text-slate-600">売る</td></tr>
+              <tr class="hover:bg-slate-50"><td>send</td><td>sent</td><td class="text-emerald-700 font-bold">sent</td><td class="font-sans text-slate-600">送る</td></tr>
+              <tr class="hover:bg-slate-50"><td>shock</td><td>shocked</td><td class="text-emerald-700 font-bold">shocked</td><td class="font-sans text-slate-600">ショックを与える</td></tr>
+              <tr class="hover:bg-slate-50"><td>show</td><td>showed</td><td class="text-emerald-700 font-bold">shown</td><td class="font-sans text-slate-600">見せる</td></tr>
+              <tr class="hover:bg-slate-50"><td>sing</td><td>sang</td><td class="text-emerald-700 font-bold">sung</td><td class="font-sans text-slate-600">歌う</td></tr>
+              <tr class="hover:bg-slate-50"><td>speak</td><td>spoke</td><td class="text-emerald-700 font-bold">spoken</td><td class="font-sans text-slate-600">話す</td></tr>
+              <tr class="hover:bg-slate-50"><td>steal</td><td>stole</td><td class="text-emerald-700 font-bold">stolen</td><td class="font-sans text-slate-600">盗む</td></tr>
+              <tr class="hover:bg-slate-50"><td>surprise</td><td>surprised</td><td class="text-emerald-700 font-bold">surprised</td><td class="font-sans text-slate-600">驚かせる</td></tr>
+              <tr class="hover:bg-slate-50"><td>take</td><td>took</td><td class="text-emerald-700 font-bold">taken</td><td class="font-sans text-slate-600">（写真を）撮る</td></tr>
+              <tr class="hover:bg-slate-50"><td>take care (of)</td><td>took care</td><td class="text-emerald-700 font-bold">taken care (of)</td><td class="font-sans text-slate-600">世話をする</td></tr>
+              <tr class="hover:bg-slate-50"><td>talk (to)</td><td>talked</td><td class="text-emerald-700 font-bold">talked (to)</td><td class="font-sans text-slate-600">話しかける</td></tr>
+              <tr class="hover:bg-slate-50"><td>tell</td><td>told</td><td class="text-emerald-700 font-bold">told</td><td class="font-sans text-slate-600">伝える・話す</td></tr>
+              <tr class="hover:bg-slate-50"><td>use</td><td>used</td><td class="text-emerald-700 font-bold">used</td><td class="font-sans text-slate-600">使う</td></tr>
+              <tr class="hover:bg-slate-50"><td>visit</td><td>visited</td><td class="text-emerald-700 font-bold">visited</td><td class="font-sans text-slate-600">訪問する</td></tr>
+              <tr class="hover:bg-slate-50"><td>wash</td><td>washed</td><td class="text-emerald-700 font-bold">washed</td><td class="font-sans text-slate-600">洗う</td></tr>
+              <tr class="hover:bg-slate-50"><td>worry</td><td>worried</td><td class="text-emerald-700 font-bold">worried</td><td class="font-sans text-slate-600">心配させる</td></tr>
+              <tr class="hover:bg-slate-50"><td>write</td><td>wrote</td><td class="text-emerald-700 font-bold">written</td><td class="font-sans text-slate-600">書く</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="flex justify-between pt-4">
+        <button onclick="switchMainPage('extra')" class="px-5 py-2.5 bg-slate-200 text-slate-800 text-xs font-bold rounded-xl hover:bg-slate-300 transition flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left"></i> <span>前へ: 3. 追加情報と前置詞</span>
+        </button>
+        <button onclick="switchMainPage('questions-sec')" class="px-5 py-2.5 bg-teal-600 text-white text-xs font-bold rounded-xl hover:bg-teal-700 transition flex items-center gap-2">
+          <span>次へ: 5. 受動態＆質問</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 5: PASSIVE VOICE & QUESTIONS -->
+    <section id="page-questions-sec" class="space-y-6 page-view hidden">
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h3 class="text-2xl font-bold text-slate-900" data-i18n="sec5-title">5. 受動態＆質問 (Passive Voice & Questions)</h3>
+        <p class="text-slate-500 text-sm" data-i18n="sec5-sub">Mastering 4 Key Question Patterns in Passive Voice</p>
+      </div>
+
+      <!-- Explanations & 4 Patterns -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-6 text-slate-700 shadow-sm">
+        <p data-i18n="sec5-p1">
+          受動態の疑問文は、大きく分けると<b>4つのパターン</b>に分類できます。どのパターンでも、疑問文の末尾には「場所」「時」「理由」などの<b>追加情報（前置詞句）</b>を自由につけ加えることができます。
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Pattern 1 -->
+          <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-2">
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-widest" data-i18n="qpat-1-badge">パターン 1</span>
+            <h4 class="font-bold text-base text-slate-900" data-i18n="qpat-1-title">be動詞で始まる疑問文</h4>
+            <div class="p-2.5 bg-white border border-slate-200 rounded-lg text-xs font-mono text-teal-800 font-bold" data-i18n="qpat-1-formula">
+              語順: be動詞 ＋ 目的語(モノ) ＋ 過去分詞 ＋ 〜〜?
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="qpat-1-desc">「〜されましたか？ / 〜されていますか？」と「Yes / No」を尋ねる基本の形です。</p>
+          </div>
+
+          <!-- Pattern 2 -->
+          <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-2">
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-widest" data-i18n="qpat-2-badge">パターン 2</span>
+            <h4 class="font-bold text-base text-slate-900" data-i18n="qpat-2-title">What で始まる疑問文</h4>
+            <div class="p-2.5 bg-white border border-slate-200 rounded-lg text-xs font-mono text-teal-800 font-bold" data-i18n="qpat-2-formula">
+              語順: What ＋ be動詞 ＋ 過去分詞 ＋ 〜〜?
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="qpat-2-desc"> What がそのまま主語（何が〜されたか）になる場合と、「何が〜されましたか？」を聞く場合です。</p>
+          </div>
+
+          <!-- Pattern 3 -->
+          <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-2">
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-widest" data-i18n="qpat-3-badge">パターン 3</span>
+            <h4 class="font-bold text-base text-slate-900" data-i18n="qpat-3-title">How much / How many で始まる疑問文</h4>
+            <div class="p-2.5 bg-white border border-slate-200 rounded-lg text-xs font-mono text-teal-800 font-bold space-y-1">
+              <div data-i18n="qpat-3-f1">a) How much ＋ 目的語 ＋ be動詞(単数) ＋ 過去分詞 ＋ 〜〜?</div>
+              <div data-i18n="qpat-3-f2">b) How many ＋ 目的語 ＋ be動詞(複数) ＋ 過去分詞 ＋ 〜〜?</div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="qpat-3-desc">数量や数（いくつの曲、どれくらいの量）が受動態で扱われたかを質問します。</p>
+          </div>
+
+          <!-- Pattern 4 -->
+          <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-2">
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-widest" data-i18n="qpat-4-badge">パターン 4</span>
+            <h4 class="font-bold text-base text-slate-900" data-i18n="qpat-4-title">Who / When / Where / Why で始まる疑問文</h4>
+            <div class="p-2.5 bg-white border border-slate-200 rounded-lg text-xs font-mono text-teal-800 font-bold" data-i18n="qpat-4-formula">
+              語順: 疑問詞 ＋ be動詞 ＋ 目的語(モノ) ＋ 過去分詞 ＋ 〜〜?
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="qpat-4-desc">いつ・どこで・なぜ・誰によって行われたかの「詳しい情報」を尋ねる疑問文です。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question & Answer Examples -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm">
+        <div class="text-xs font-bold text-slate-500 uppercase tracking-widest" data-i18n="qa-examples-title">疑問文と正しく答える回答例 (Q&A Examples)</div>
+
+        <div class="space-y-3 font-mono text-xs md:text-sm">
+          <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+            <div class="text-amber-800 font-bold">Q: Was the magazine sent to you last week?</div>
+            <div class="text-slate-900 font-bold">A: Yes, it was. / No, it wasn't.</div>
+            <div class="text-slate-600 font-sans text-xs" data-i18n="qa-ex-1">その雑誌は先週あなたに送られましたか？ ➔ はい、送られました。/ いいえ、送られていません。</div>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+            <div class="text-amber-800 font-bold">Q: What was stolen from that store?</div>
+            <div class="text-slate-900 font-bold">A: Some expensive watches were stolen.</div>
+            <div class="text-slate-600 font-sans text-xs" data-i18n="qa-ex-2">その店から何が盗まれましたか？ ➔ いくつかの高価な時計が盗まれました。</div>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+            <div class="text-amber-800 font-bold">Q: How many songs were sung at the party?</div>
+            <div class="text-slate-900 font-bold">A: Five songs were sung at the party.</div>
+            <div class="text-slate-600 font-sans text-xs" data-i18n="qa-ex-3">パーティーでは何曲歌われましたか？ ➔ 5曲歌われました。</div>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+            <div class="text-amber-800 font-bold">Q: Where was the beautiful bird caught?</div>
+            <div class="text-slate-900 font-bold">A: It was caught in the forest near the lake.</div>
+            <div class="text-slate-600 font-sans text-xs" data-i18n="qa-ex-4">その美しい鳥はどこで捕まえられましたか？ ➔ 湖の近くの森で捕まえられました。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 5 Five Review Problems -->
+      <div class="space-y-4">
+        <h4 class="font-bold text-lg text-slate-900 flex flex-wrap items-center justify-between gap-2" id="sec5-prob-head">
+          <span data-i18n="sec5-prob-title">セクション5 小テスト（疑問文の穴埋め5問）</span>
+          <button onclick="checkSec5Answers()" class="px-4 py-2 bg-gradient-to-r from-amber-600 to-teal-600 hover:from-amber-700 hover:to-teal-700 text-white font-extrabold text-xs rounded-xl transition shadow-md flex items-center gap-1.5">
+            <i class="fa-solid fa-check-double"></i> <span data-i18n="sec5-check-btn">疑問文の回答を全判定</span>
+          </button>
+        </h4>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- S5-Q1 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 space-y-3 q-card shadow-sm" id="s5q1-card">
+            <div class="flex items-center justify-between text-xs text-slate-500">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-amber-800" data-i18n="s5q1-label">疑問文 Q1</span>
+                <button onclick="playAudio('s5q1')" class="px-2 py-0.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1 transition font-bold">
+                  <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+                </button>
+              </div>
+              <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded text-amber-800 text-xs font-bold" data-i18n="s5q1-tag">When ...?</span>
+            </div>
+            <p class="text-sm text-slate-800 font-medium question-text" id="s5q1-text">この絵はいつ描かれたのですか。 ( when / paint )</p>
+            <div class="flex flex-wrap items-center gap-2 font-mono text-sm text-slate-900 bg-slate-50 p-3 rounded-xl border border-slate-200 input-box">
+              <span>When</span>
+              <input type="text" id="s5q1-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-2.5 py-1 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-xs shadow-inner">
+              <span>this picture?</span>
+            </div>
+            <div class="flex justify-end pt-1">
+              <button onclick="revealSingleAnswer('s5q1', 'was painted', 'Whenの疑問文なので [was + 主語 + 過去分詞 painted] となります。')" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1">
+                <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+              </button>
+            </div>
+            <div id="s5q1-feedback" class="hidden text-xs rounded-xl p-2.5 border"></div>
+          </div>
+
+          <!-- S5-Q2 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 space-y-3 q-card shadow-sm" id="s5q2-card">
+            <div class="flex items-center justify-between text-xs text-slate-500">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-amber-800" data-i18n="s5q2-label">疑問文 Q2</span>
+                <button onclick="playAudio('s5q2')" class="px-2 py-0.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1 transition font-bold">
+                  <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+                </button>
+              </div>
+              <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded text-amber-800 text-xs font-bold" data-i18n="s5q2-tag">Where ...?</span>
+            </div>
+            <p class="text-sm text-slate-800 font-medium question-text" id="s5q2-text">その美しい鳥はどこで捕まえられましたか。 ( where / catch )</p>
+            <div class="flex flex-wrap items-center gap-2 font-mono text-sm text-slate-900 bg-slate-50 p-3 rounded-xl border border-slate-200 input-box">
+              <span>Where</span>
+              <input type="text" id="s5q2-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-2.5 py-1 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-xs shadow-inner">
+              <span>the beautiful bird?</span>
+            </div>
+            <div class="flex justify-end pt-1">
+              <button onclick="revealSingleAnswer('s5q2', 'was caught', 'Whereの疑問文なので [was + 主語 + 過去分詞 caught] となります。')" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1">
+                <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+              </button>
+            </div>
+            <div id="s5q2-feedback" class="hidden text-xs rounded-xl p-2.5 border"></div>
+          </div>
+
+          <!-- S5-Q3 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 space-y-3 q-card shadow-sm" id="s5q3-card">
+            <div class="flex items-center justify-between text-xs text-slate-500">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-amber-800" data-i18n="s5q3-label">疑問文 Q3</span>
+                <button onclick="playAudio('s5q3')" class="px-2 py-0.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1 transition font-bold">
+                  <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+                </button>
+              </div>
+              <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded text-amber-800 text-xs font-bold" data-i18n="s5q3-tag">How many ...?</span>
+            </div>
+            <p class="text-sm text-slate-800 font-medium question-text" id="s5q3-text">パーティーでは何曲歌われましたか。 ( how many / sing )</p>
+            <div class="flex flex-wrap items-center gap-2 font-mono text-sm text-slate-900 bg-slate-50 p-3 rounded-xl border border-slate-200 input-box">
+              <span>How many songs</span>
+              <input type="text" id="s5q3-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-2.5 py-1 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-xs shadow-inner">
+              <span>at the party?</span>
+            </div>
+            <div class="flex justify-end pt-1">
+              <button onclick="revealSingleAnswer('s5q3', 'were sung', '複数名詞 songs に応じて [were + 過去分詞 sung] となります。')" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1">
+                <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+              </button>
+            </div>
+            <div id="s5q3-feedback" class="hidden text-xs rounded-xl p-2.5 border"></div>
+          </div>
+
+          <!-- S5-Q4 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 space-y-3 q-card shadow-sm" id="s5q4-card">
+            <div class="flex items-center justify-between text-xs text-slate-500">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-amber-800" data-i18n="s5q4-label">疑問文 Q4</span>
+                <button onclick="playAudio('s5q4')" class="px-2 py-0.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1 transition font-bold">
+                  <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+                </button>
+              </div>
+              <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded text-amber-800 text-xs font-bold" data-i18n="s5q4-tag">What ...?</span>
+            </div>
+            <p class="text-sm text-slate-800 font-medium question-text" id="s5q4-text">何がその店から盗まれましたか。 ( what / steal )</p>
+            <div class="flex flex-wrap items-center gap-2 font-mono text-sm text-slate-900 bg-slate-50 p-3 rounded-xl border border-slate-200 input-box">
+              <span>What</span>
+              <input type="text" id="s5q4-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-2.5 py-1 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-xs shadow-inner">
+              <span>from that store?</span>
+            </div>
+            <div class="flex justify-end pt-1">
+              <button onclick="revealSingleAnswer('s5q4', 'was stolen', 'Whatが主語になる疑問文なので [was stolen] となります。')" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1">
+                <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+              </button>
+            </div>
+            <div id="s5q4-feedback" class="hidden text-xs rounded-xl p-2.5 border"></div>
+          </div>
+
+          <!-- S5-Q5 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 space-y-3 q-card shadow-sm" id="s5q5-card">
+            <div class="flex items-center justify-between text-xs text-slate-500">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-amber-800" data-i18n="s5q5-label">疑問文 Q5</span>
+                <button onclick="playAudio('s5q5')" class="px-2 py-0.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1 transition font-bold">
+                  <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+                </button>
+              </div>
+              <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded text-amber-800 text-xs font-bold" data-i18n="s5q5-tag">Why ...?</span>
+            </div>
+            <p class="text-sm text-slate-800 font-medium question-text" id="s5q5-text">なぜ彼らはテレビでインタビューを受けたのですか。 ( why / interview )</p>
+            <div class="flex flex-wrap items-center gap-2 font-mono text-sm text-slate-900 bg-slate-50 p-3 rounded-xl border border-slate-200 input-box">
+              <span>Why</span>
+              <input type="text" id="s5q5-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-2.5 py-1 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-xs shadow-inner">
+              <span>on TV?</span>
+            </div>
+            <div class="flex justify-end pt-1">
+              <button onclick="revealSingleAnswer('s5q5', 'were they interviewed', 'Whyの疑問文で複数主語 they なので [were they interviewed] となります。')" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1">
+                <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+              </button>
+            </div>
+            <div id="s5q5-feedback" class="hidden text-xs rounded-xl p-2.5 border"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-between pt-4">
+        <button onclick="switchMainPage('verb-bank')" class="px-5 py-2.5 bg-slate-200 text-slate-800 text-xs font-bold rounded-xl hover:bg-slate-300 transition flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left"></i> <span>前へ: 4. 動詞・過去分詞バンク</span>
+        </button>
+        <button onclick="switchMainPage('practice')" class="px-5 py-2.5 bg-teal-600 text-white text-xs font-bold rounded-xl hover:bg-teal-700 transition flex items-center gap-2">
+          <span>次へ: 6. 練習問題</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 6: INTERACTIVE PRACTICE WORKSHEET -->
+    <section id="page-practice" class="space-y-6 page-view hidden">
+      <div class="border-l-4 border-teal-600 pl-4 flex flex-col md:flex-row md:items-end justify-between gap-2">
+        <div>
+          <h3 class="text-2xl font-bold text-slate-900" id="practice-heading">6. 練習問題（総合ワークシート）</h3>
+          <p class="text-slate-500 text-sm" id="practice-subheading">Click <i class="fa-solid fa-volume-high text-amber-600"></i> to listen to the sentence, then type your answer in the blank.</p>
+        </div>
+        <button onclick="checkAllAnswers()" class="self-start md:self-auto px-5 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-extrabold text-sm rounded-xl transition shadow-md flex items-center gap-2">
+          <i class="fa-solid fa-circle-check"></i> <span data-i18n="check-btn">全ての解答をチェック</span>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Q1 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 q-card shadow-sm" id="q1-card">
+          <div class="flex items-center justify-between text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-teal-700" data-i18n="q1-label">問題 1</span>
+              <button onclick="playAudio('q1')" title="Listen to sentence" class="px-2 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1.5 transition font-bold">
+                <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+              </button>
+            </div>
+            <span class="bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md text-amber-800 font-bold badge-tag" data-i18n="q1-tag">時制: 過去進行形</span>
+          </div>
+          <p class="text-base text-slate-800 font-medium question-text" id="q1-text">
+            その橋は当時、建設されているところだった。 ( build )
+          </p>
+          <div class="flex flex-wrap items-center gap-2 font-mono text-sm md:text-base text-slate-900 bg-slate-50 p-4 rounded-xl border border-slate-200 input-box">
+            <span>The bridge</span>
+            <input type="text" id="q1-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-sm shadow-inner">
+            <span>at that time.</span>
+          </div>
+          <div class="flex justify-end pt-1">
+            <button onclick="revealSingleAnswer('q1', 'was being built', '過去進行形（単数 The bridge）なので「was being built」となります。')" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1.5">
+              <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+            </button>
+          </div>
+          <div id="q1-feedback" class="hidden text-xs md:text-sm rounded-xl p-3 border"></div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 q-card shadow-sm" id="q2-card">
+          <div class="flex items-center justify-between text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-teal-700" data-i18n="q2-label">問題 2</span>
+              <button onclick="playAudio('q2')" title="Listen to sentence" class="px-2 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1.5 transition font-bold">
+                <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+              </button>
+            </div>
+            <span class="bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md text-amber-800 font-bold badge-tag" data-i18n="q2-tag">時制: 現在進行形</span>
+          </div>
+          <p class="text-base text-slate-800 font-medium question-text" id="q2-text">
+            私の父の車は今、修理されているところだ。 ( repair )
+          </p>
+          <div class="flex flex-wrap items-center gap-2 font-mono text-sm md:text-base text-slate-900 bg-slate-50 p-4 rounded-xl border border-slate-200 input-box">
+            <span>My father's car</span>
+            <input type="text" id="q2-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-sm shadow-inner">
+            <span>now.</span>
+          </div>
+          <div class="flex justify-end pt-1">
+            <button onclick="revealSingleAnswer('q2', 'is being repaired', '現在進行形（単数 car）なので「is being repaired」となります。')" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1.5">
+              <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+            </button>
+          </div>
+          <div id="q2-feedback" class="hidden text-xs md:text-sm rounded-xl p-3 border"></div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 q-card shadow-sm" id="q3-card">
+          <div class="flex items-center justify-between text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-teal-700" data-i18n="q3-label">問題 3</span>
+              <button onclick="playAudio('q3')" title="Listen to sentence" class="px-2 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1.5 transition font-bold">
+                <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+              </button>
+            </div>
+            <span class="bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md text-amber-800 font-bold badge-tag" data-i18n="q3-tag">時制: 現在進行形</span>
+          </div>
+          <p class="text-base text-slate-800 font-medium question-text" id="q3-text">
+            彼の新しい小説は今、書かれているところだ。 ( write )
+          </p>
+          <div class="flex flex-wrap items-center gap-2 font-mono text-sm md:text-base text-slate-900 bg-slate-50 p-4 rounded-xl border border-slate-200 input-box">
+            <span>His new novel</span>
+            <input type="text" id="q3-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-sm shadow-inner">
+            <span>now.</span>
+          </div>
+          <div class="flex justify-end pt-1">
+            <button onclick="revealSingleAnswer('q3', 'is being written', '現在進行形（単数 novel）＋ writeの過去分詞「written」で「is being written」となります。')" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1.5">
+              <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+            </button>
+          </div>
+          <div id="q3-feedback" class="hidden text-xs md:text-sm rounded-xl p-3 border"></div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 q-card shadow-sm" id="q4-card">
+          <div class="flex items-center justify-between text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-teal-700" data-i18n="q4-label">問題 4</span>
+              <button onclick="playAudio('q4')" title="Listen to sentence" class="px-2 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1.5 transition font-bold">
+                <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+              </button>
+            </div>
+            <span class="bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md text-amber-800 font-bold badge-tag" data-i18n="q4-tag">時制: 過去進行形 (複数)</span>
+          </div>
+          <p class="text-base text-slate-800 font-medium question-text" id="q4-text">
+            それらの古木は切り倒されているところだった。 ( cut )
+          </p>
+          <div class="flex flex-wrap items-center gap-2 font-mono text-sm md:text-base text-slate-900 bg-slate-50 p-4 rounded-xl border border-slate-200 input-box">
+            <span>The old trees</span>
+            <input type="text" id="q4-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-sm shadow-inner">
+            <span>down.</span>
+          </div>
+          <div class="flex justify-end pt-1">
+            <button onclick="revealSingleAnswer('q4', 'were being cut', '過去進行形（複数 trees）＋ cutの過去分詞「cut」で「were being cut」となります。')" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1.5">
+              <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+            </button>
+          </div>
+          <div id="q4-feedback" class="hidden text-xs md:text-sm rounded-xl p-3 border"></div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 q-card shadow-sm" id="q5-card">
+          <div class="flex items-center justify-between text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-teal-700" data-i18n="q5-label">問題 5</span>
+              <button onclick="playAudio('q5')" title="Listen to sentence" class="px-2 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1.5 transition font-bold">
+                <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+              </button>
+            </div>
+            <span class="bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md text-amber-800 font-bold badge-tag" data-i18n="q5-tag">UNIT 21: 基本過去形</span>
+          </div>
+          <p class="text-base text-slate-800 font-medium question-text" id="q5-text">
+            この寺は江戸時代に建てられた。 ( build )
+          </p>
+          <div class="flex flex-wrap items-center gap-2 font-mono text-sm md:text-base text-slate-900 bg-slate-50 p-4 rounded-xl border border-slate-200 input-box">
+            <span>This temple</span>
+            <input type="text" id="q5-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-sm shadow-inner">
+            <span>in the Edo period.</span>
+          </div>
+          <div class="flex justify-end pt-1">
+            <button onclick="revealSingleAnswer('q5', 'was built', '過去形（単数 temple）なので「was built」となります。')" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1.5">
+              <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+            </button>
+          </div>
+          <div id="q5-feedback" class="hidden text-xs md:text-sm rounded-xl p-3 border"></div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 q-card shadow-sm" id="q6-card">
+          <div class="flex items-center justify-between text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-teal-700" data-i18n="q6-label">問題 6</span>
+              <button onclick="playAudio('q6')" title="Listen to sentence" class="px-2 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1.5 transition font-bold">
+                <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+              </button>
+            </div>
+            <span class="bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md text-amber-800 font-bold badge-tag" data-i18n="q6-tag">UNIT 21: 助動詞 (can)</span>
+          </div>
+          <p class="text-base text-slate-800 font-medium question-text" id="q6-text">
+            ここでは、夜にたくさんの星が見られる。 ( can / see )
+          </p>
+          <div class="flex flex-wrap items-center gap-2 font-mono text-sm md:text-base text-slate-900 bg-slate-50 p-4 rounded-xl border border-slate-200 input-box">
+            <span>A lot of stars</span>
+            <input type="text" id="q6-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-sm shadow-inner">
+            <span>at night here.</span>
+          </div>
+          <div class="flex justify-end pt-1">
+            <button onclick="revealSingleAnswer('q6', 'can be seen', '助動詞 + be + 過去分詞 の公式で「can be seen」となります。')" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1.5">
+              <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+            </button>
+          </div>
+          <div id="q6-feedback" class="hidden text-xs md:text-sm rounded-xl p-3 border"></div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 q-card shadow-sm" id="q7-card">
+          <div class="flex items-center justify-between text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-teal-700" data-i18n="q7-label">問題 7</span>
+              <button onclick="playAudio('q7')" title="Listen to sentence" class="px-2 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1.5 transition font-bold">
+                <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+              </button>
+            </div>
+            <span class="bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md text-amber-800 font-bold badge-tag" data-i18n="q7-tag">UNIT 22: 現在完了形</span>
+          </div>
+          <p class="text-base text-slate-800 font-medium question-text" id="q7-text">
+            そのケーキはトムによってすでに食べられてしまった。 ( eat )
+          </p>
+          <div class="flex flex-wrap items-center gap-2 font-mono text-sm md:text-base text-slate-900 bg-slate-50 p-4 rounded-xl border border-slate-200 input-box">
+            <span>The cake has already</span>
+            <input type="text" id="q7-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-sm shadow-inner">
+            <span>by Tom.</span>
+          </div>
+          <div class="flex justify-end pt-1">
+            <button onclick="revealSingleAnswer('q7', 'been eaten', '現在完了形の受動態 has been + 過去分詞「been eaten」となります。')" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1.5">
+              <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+            </button>
+          </div>
+          <div id="q7-feedback" class="hidden text-xs md:text-sm rounded-xl p-3 border"></div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 q-card shadow-sm" id="q8-card">
+          <div class="flex items-center justify-between text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-teal-700" data-i18n="q8-label">問題 8</span>
+              <button onclick="playAudio('q8')" title="Listen to sentence" class="px-2 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-lg text-xs flex items-center gap-1.5 transition font-bold">
+                <i class="fa-solid fa-volume-high text-amber-700"></i> <span data-i18n="listen-btn">音声を聞く</span>
+              </button>
+            </div>
+            <span class="bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md text-amber-800 font-bold badge-tag" data-i18n="q8-tag">UNIT 21: 現在形 (複数)</span>
+          </div>
+          <p class="text-base text-slate-800 font-medium question-text" id="q8-text">
+            カナダでは英語とフランス語が話されている。 ( speak )
+          </p>
+          <div class="flex flex-wrap items-center gap-2 font-mono text-sm md:text-base text-slate-900 bg-slate-50 p-4 rounded-xl border border-slate-200 input-box">
+            <span>English and French</span>
+            <input type="text" id="q8-input" placeholder="ここに入力..." class="bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-amber-800 font-bold focus:outline-none focus:border-amber-600 w-44 text-center text-sm shadow-inner">
+            <span>in Canada.</span>
+          </div>
+          <div class="flex justify-end pt-1">
+            <button onclick="revealSingleAnswer('q8', 'are spoken', '複数主語（English and French）に応じた現在形受動態「are spoken」となります。')" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1.5">
+              <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+            </button>
+          </div>
+          <div id="q8-feedback" class="hidden text-xs md:text-sm rounded-xl p-3 border"></div>
+        </div>
+
+      </div>
+
+      <div class="flex justify-between pt-4">
+        <button onclick="switchMainPage('questions-sec')" class="px-5 py-2.5 bg-slate-200 text-slate-800 text-xs font-bold rounded-xl hover:bg-slate-300 transition flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left"></i> <span>前へ: 5. 受動態＆質問</span>
+        </button>
+        <button onclick="switchMainPage('svoo-svoc-sec')" class="px-5 py-2.5 bg-teal-600 text-white text-xs font-bold rounded-xl hover:bg-teal-700 transition flex items-center gap-2">
+          <span>次へ: 7. 文型＆受動態(SVOO/SVOC)</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 7: SVOO & SVOC PRIMER -->
+    <section id="page-svoo-svoc-sec" class="space-y-8 page-view hidden">
+      <div class="border-l-4 border-indigo-600 pl-4">
+        <h3 class="text-2xl font-bold text-slate-900" data-i18n="sec7-title">7. 文型＆受動態：SVOO/SVOCプライマー</h3>
+        <p class="text-slate-500 text-sm" data-i18n="sec7-sub">Mastering Passive Transformations in SVOO and SVOC Sentence Structures</p>
+      </div>
+
+      <!-- Core Mechanics Interactive Tabs -->
+      <div class="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 space-y-6 shadow-sm">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-indigo-600 inline-block animate-pulse"></span>
+            <h4 class="font-bold text-lg text-slate-900" data-i18n="s7-tab-head">SVOO & SVOC 学習ステーション</h4>
+          </div>
+
+          <div class="flex items-center gap-2 bg-slate-100 p-1.5 rounded-xl border border-slate-200 text-xs font-semibold">
+            <button onclick="switchS7Tab('s7-learn')" id="s7-btn-learn" class="px-4 py-2 rounded-lg bg-indigo-600 text-white shadow-sm transition font-bold" data-i18n="s7-tab-1">
+              <i class="fa-solid fa-book-open mr-1"></i> 解説 (Learn)
+            </button>
+            <button onclick="switchS7Tab('s7-practice')" id="s7-btn-practice" class="px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition" data-i18n="s7-tab-2">
+              <i class="fa-solid fa-pen-to-square mr-1"></i> 演習 (Exercises)
+            </button>
+            <button onclick="switchS7Tab('s7-game')" id="s7-btn-game" class="px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition" data-i18n="s7-tab-3">
+              <i class="fa-solid fa-gamepad mr-1 text-amber-600"></i> ゲーム (Arcade)
+            </button>
+          </div>
+        </div>
+
+        <!-- SUB-TAB 1: LEARN -->
+        <div id="s7-tab-sec-learn" class="space-y-6">
+          <!-- SVO vs Passive Core -->
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4">
+            <h5 class="font-bold text-base text-amber-800 flex items-center gap-2">
+              <i class="fa-solid fa-arrows-rotate"></i> <span data-i18n="s7-c1-title">SVOO (第4文型) の受動態：2つのパターン</span>
+            </h5>
+            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="s7-c1-desc">
+              SVOO文型には「人 (O1)」と「物 (O2)」の2つの目的語があるため、どちらを主語にするかで2種類の受動態を作成できます。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div class="bg-white border border-slate-200 p-4 rounded-xl space-y-2 shadow-sm">
+                <span class="text-xs font-bold text-teal-800 block" data-i18n="s7-pat-a">【パターン A】「人」を主語にする</span>
+                <div class="font-mono text-xs text-slate-900">Angela <span class="text-amber-800 font-bold">was given</span> the ring by Brad.</div>
+                <div class="text-xs text-slate-500" data-i18n="s7-pat-a-sub">人 ＋ be動詞 ＋ 過去分詞 ＋ 物 ＋ by...</div>
+              </div>
+
+              <div class="bg-white border border-slate-200 p-4 rounded-xl space-y-2 shadow-sm">
+                <span class="text-xs font-bold text-amber-800 block" data-i18n="s7-pat-b">【パターン B】「物」を主語にする (to / for)</span>
+                <div class="font-mono text-xs text-slate-900">The ring <span class="text-amber-800 font-bold">was given to</span> Angela by Brad.</div>
+                <div class="text-xs text-slate-500" data-i18n="s7-pat-b-sub">物 ＋ be動詞 ＋ 過去分詞 ＋ to/for ＋ 人 ＋ by...</div>
+              </div>
+            </div>
+
+            <!-- to vs for rule card -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-3">
+              <div class="bg-teal-50 border border-teal-200 p-4 rounded-xl space-y-2">
+                <span class="text-xs font-bold text-teal-900" data-i18n="s7-to-verbs">【to を使う動詞】 (到達・移動)</span>
+                <p class="text-xs text-slate-700" data-i18n="s7-to-desc">相手への到達が必須の動詞: give, show, tell, teach, send, lend</p>
+              </div>
+              <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl space-y-2">
+                <span class="text-xs font-bold text-amber-900" data-i18n="s7-for-verbs">【for を使う動詞】 (準備・調達)</span>
+                <p class="text-xs text-slate-700" data-i18n="s7-for-desc">相手のために行う動詞: buy, make, cook, find (※人を主語にする受動態は原則不可)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SVOC Mechanics -->
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4">
+            <h5 class="font-bold text-base text-emerald-800 flex items-center gap-2">
+              <i class="fa-solid fa-link"></i> <span data-i18n="s7-c2-title">SVOC (第5文型) の受動態：補語(C)の残し方</span>
+            </h5>
+            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="s7-c2-desc">
+              SVOC文型では目的語(O)が受動態の主語になります。補語(C)は形を変えずに過去分詞の直後にそのまま残ります。
+            </p>
+
+            <div class="space-y-3 font-mono text-xs">
+              <div class="p-3 bg-white border border-slate-200 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-2 shadow-sm">
+                <div>
+                  <span class="text-slate-400 block text-[10px]">Active</span>
+                  <span class="text-slate-800">They call the girl Angela.</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-emerald-700 hidden md:block"></i>
+                <div>
+                  <span class="text-slate-400 block text-[10px]">Passive</span>
+                  <span class="text-emerald-800 font-bold">The girl is called Angela.</span>
+                </div>
+              </div>
+              <div class="p-3 bg-white border border-slate-200 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-2 shadow-sm">
+                <div>
+                  <span class="text-slate-400 block text-[10px]">Active</span>
+                  <span class="text-slate-800">Mike left the door open.</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-emerald-700 hidden md:block"></i>
+                <div>
+                  <span class="text-slate-400 block text-[10px]">Passive</span>
+                  <span class="text-emerald-800 font-bold">The door was left open by Mike.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUB-TAB 2: PRACTICE EXERCISES -->
+        <div id="s7-tab-sec-practice" class="hidden space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-3">
+            <div class="text-sm font-bold text-slate-700" data-i18n="s7-filter-label">カテゴリー別問題演習:</div>
+            <div class="flex gap-2">
+              <button onclick="filterS7Practice('all')" id="s7-flt-all" class="px-3 py-1 bg-indigo-600 text-white rounded-lg text-xs font-bold shadow-sm">すべて (All)</button>
+              <button onclick="filterS7Practice('svoo')" id="s7-flt-svoo" class="px-3 py-1 bg-white text-slate-700 border border-slate-300 rounded-lg text-xs hover:text-indigo-600">SVOO受動態</button>
+              <button onclick="filterS7Practice('svoc')" id="s7-flt-svoc" class="px-3 py-1 bg-white text-slate-700 border border-slate-300 rounded-lg text-xs hover:text-indigo-600">SVOC受動態</button>
+              <button onclick="filterS7Practice('idiom')" id="s7-flt-idiom" class="px-3 py-1 bg-white text-slate-700 border border-slate-300 rounded-lg text-xs hover:text-indigo-600">群動詞・イディオム</button>
+            </div>
+          </div>
+
+          <div id="s7-exercises-list" class="space-y-4">
+            <!-- Populated dynamically by JS -->
+          </div>
+        </div>
+
+        <!-- SUB-TAB 3: ARCADE GAME -->
+        <div id="s7-tab-sec-game" class="hidden space-y-6">
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 text-center relative overflow-hidden shadow-xl text-white">
+            <!-- Game Header Bar -->
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+              <div class="text-xs font-bold text-amber-400 tracking-wider uppercase">
+                SPEED GRAMMAR ARCADE: SVOO & SVOC
+              </div>
+              <div class="flex items-center gap-4 text-xs font-mono font-bold">
+                <div>SCORE: <span id="s7-game-score" class="text-amber-400 text-base">0</span></div>
+                <div>STREAK: <span id="s7-game-streak" class="text-emerald-400 text-base">0 🔥</span></div>
+                <div>TIME: <span id="s7-game-timer" class="text-rose-400 text-base">60s</span></div>
+              </div>
+            </div>
+
+            <!-- Game Screen Start -->
+            <div id="s7-g-start" class="space-y-4 py-6">
+              <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-amber-500 to-indigo-500 flex items-center justify-center text-slate-950 text-2xl font-black shadow-lg">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h5 class="text-lg font-bold text-white" data-i18n="s7-game-head">SVOO & SVOC 受動態瞬発チャレンジ</h5>
+              <p class="text-xs text-slate-300 max-w-md mx-auto" data-i18n="s7-game-desc">
+                提示される能動態の英文に対する「正しい受動態の文」を60秒以内に正確に選択してください！
+              </p>
+              <button onclick="startS7Game()" class="px-6 py-3 bg-gradient-to-r from-amber-500 to-indigo-500 text-slate-950 font-black text-xs rounded-xl shadow-lg hover:scale-105 transition transform">
+                <i class="fa-solid fa-play mr-1"></i> <span data-i18n="s7-game-start-btn">ゲームをスタート (Start Game)</span>
+              </button>
+            </div>
+
+            <!-- Game Screen Playing -->
+            <div id="s7-g-play" class="hidden space-y-6 max-w-xl mx-auto py-2">
+              <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 text-center space-y-1">
+                <span id="s7-g-cat" class="text-[10px] font-bold text-indigo-300 uppercase tracking-widest">SVOO Pattern</span>
+                <div class="text-xs text-slate-400">Active Voice:</div>
+                <div id="s7-g-qtext" class="text-base sm:text-lg font-mono font-bold text-amber-300">
+                  Brad gave Angela the ring.
+                </div>
+              </div>
+
+              <div id="s7-g-options" class="grid grid-cols-1 gap-2 text-xs font-mono text-left">
+                <!-- Options populated by JS -->
+              </div>
+            </div>
+
+            <!-- Game Screen End -->
+            <div id="s7-g-end" class="hidden space-y-4 py-8">
+              <div class="text-4xl">🏆</div>
+              <h5 class="text-xl font-bold text-white">GAME OVER</h5>
+              <div class="text-xs text-slate-300">最終スコア (Final Score):</div>
+              <div id="s7-g-final-score" class="text-4xl font-black text-amber-400 font-mono">0</div>
+              <button onclick="startS7Game()" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs rounded-xl transition">
+                <i class="fa-solid fa-rotate-right mr-1"></i> もう一度挑戦する (Play Again)
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex justify-start pt-4">
+        <button onclick="switchMainPage('practice')" class="px-5 py-2.5 bg-slate-200 text-slate-800 text-xs font-bold rounded-xl hover:bg-slate-300 transition flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left"></i> <span>前へ: 6. 練習問題</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500" id="footer-app">
+    <p>Passive Voice Master Lesson Page • Designed for EFL/ESL Students</p>
+  </footer>
+
+  <script>
+    // Global State & Translations Dictionary
+    let currentLang = 'ja';
+
+    const translations = {
+      en: {
+        "header-title": "Passive Voice Master Guide",
+        "header-sub": "Passive Voice Multi-Page Interactive Hub",
+        "nav-1": "1. Core Concept",
+        "nav-2": "2. Tense Engine",
+        "nav-3": "3. Details & Prepositions",
+        "nav-4": "4. Verb Bank",
+        "nav-5": "5. Questions & Q&A",
+        "nav-6": "6. Exercises",
+        "nav-7": "7. SVOO/SVOC Primer",
+        "hero-tag": "LESSON GUIDE FOR STUDENTS",
+        "hero-desc": "No need to complicate things! Simply place the object (receiver) first and change the BE-VERB according to the tense.",
+        "formula-title": "BASIC FORMULA",
+        "f-thing": "[THING / OBJECT]",
+        "f-be": "[BE-VERB]",
+        "f-pp": "[PAST PARTICIPLE]",
+        "f-extra": "[EXTRA DETAILS]",
+        "sec1-title": "1. Passive Voice Starting Point (Shift of Focus)",
+        "sec1-sub": "Action comes to the THING",
+        "act-label": "Active Voice (Normal Statement)",
+        "act-ex": "🐱 The cat ate 🐟 the fish.",
+        "act-desc": "The 'cat' is the subject and actively performs the action.",
+        "pass-badge": "Passive",
+        "pass-label": "Passive Voice (Receiving Statement)",
+        "pass-ex": "🐟 The fish was eaten by 🐱 the cat.",
+        "pass-desc": "The THING receiving the action becomes the main subject of the sentence!",
+        "sec2-title": "2. The Magic Tense Engine (Role of Be-verb)",
+        "sec2-sub": "Past Participle stays the SAME. Only change the BE-VERB!",
+        "sec2-p1": "The most important concept in Passive Voice is that <b>expressing the tense (when it happens) is entirely the job of the BE-VERB</b>.",
+        "sec2-p2": "The <b>[Past Participle] stays unchanged</b>! By changing only the be-verb, you can form any tense effortlessly.",
+        "th-tense": "Tense",
+        "th-be": "Be-verb Form",
+        "th-ex": "Example Sentence",
+        "th-meaning": "Meaning",
+        "t-pres": "Present",
+        "t-past": "Past",
+        "t-fut": "Future",
+        "t-pres-prog": "Present Progressive",
+        "t-past-prog": "Past Progressive",
+        "t-pres-perf": "Present Perfect",
+        "tm-pres": "English is spoken. (General fact)",
+        "tm-past": "The car was repaired. (Past event)",
+        "tm-fut": "The match will be held.",
+        "tm-pres-prog": "My car is being repaired right now.",
+        "tm-past-prog": "The bridge was being built back then.",
+        "tm-pres-perf": "The work has been done. (Already finished)",
+        "sec3-title": "3. Extra Details & Prepositions",
+        "sec3-sub": "Connecting details with prepositions",
+        "sec3-p1": "Once <b>[Thing + Be-verb + Past Participle]</b> are combined, the core sentence structure is complete.",
+        "sec3-p2": "Everything after that is <b>'Extra Information'</b>. Prepositions act as bridges connecting extra details to the past participle.",
+        "prep-who-head": "BY WHOM?",
+        "prep-who-ex": "ex: by a lot of people",
+        "prep-where-head": "WHERE?",
+        "prep-where-ex": "ex: all over the world",
+        "prep-when-head": "WHEN?",
+        "prep-when-ex": "ex: in 1998 / right now",
+        "dismantle-title": "SENTENCE DISMANTLING EXAMPLE",
+        "d-thing": "<b>[Thing]</b> The old buildings",
+        "d-be": "<b>[Be-verb]</b> Past Progressive (was in progress)",
+        "d-pp": "<b>[Past Participle]</b> demolished",
+        "d-extra": "<b>[Extra Info]</b> in 1998 (preposition in)",
+        "sec4-title": "4. Verb & Past Participle Master Bank (UNIT 21-23)",
+        "sec4-sub": "Extracted Verb Reference List for Exercises",
+        "vth-base": "Base Form",
+        "vth-past": "Past Form",
+        "vth-pp": "Past Participle (V3)",
+        "vth-meaning": "Meaning",
+        "sec5-title": "5. Passive Voice & Questions",
+        "sec5-sub": "Mastering 4 Key Question Patterns in Passive Voice",
+        "sec5-p1": "Passive voice questions are categorized into <b>4 basic patterns</b>. Prepositional phrases (time, location, reason) can be attached at the end of all questions.",
+        "qpat-1-badge": "PATTERN 1",
+        "qpat-1-title": "Questions starting with Be-verb",
+        "qpat-1-formula": "Order: Be-verb + Object(Thing) + Past Participle + ...?",
+        "qpat-1-desc": "Asks basic Yes/No questions about passive actions.",
+        "qpat-2-badge": "PATTERN 2",
+        "qpat-2-title": "Questions starting with What",
+        "qpat-2-formula": "Order: What + Be-verb + Past Participle + ...?",
+        "qpat-2-desc": "Used when 'What' acts as the passive subject (What was done?).",
+        "qpat-3-badge": "PATTERN 3",
+        "qpat-3-title": "Questions starting with How much / How many",
+        "qpat-3-f1": "a) How much + Object + Be-verb(singular) + Past Participle + ...?",
+        "qpat-3-f2": "b) How many + Object + Be-verb(plural) + Past Participle + ...?",
+        "qpat-3-desc": "Inquires about quantities or items acted upon in passive voice.",
+        "qpat-4-badge": "PATTERN 4",
+        "qpat-4-title": "Questions with Who / When / Where / Why",
+        "qpat-4-formula": "Order: Question word + Be-verb + Object + Past Participle + ...?",
+        "qpat-4-desc": "Asks for detailed information regarding time, place, reason, or actor.",
+        "qa-examples-title": "Question & Grammatically Correct Answer Examples",
+        "qa-ex-1": "Was the magazine sent to you last week? ➔ Yes, it was. / No, it wasn't.",
+        "qa-ex-2": "What was stolen from that store? ➔ Some expensive watches were stolen.",
+        "qa-ex-3": "How many songs were sung at the party? ➔ Five songs were sung at the party.",
+        "qa-ex-4": "Where was the beautiful bird caught? ➔ It was caught in the forest near the lake.",
+        "sec5-prob-title": "Section 5 Quiz (5 Passive Question Exercises)",
+        "sec5-check-btn": "Check All Question Answers",
+        "s5q1-label": "Question Q1",
+        "s5q1-tag": "When ...?",
+        "s5q2-label": "Question Q2",
+        "s5q2-tag": "Where ...?",
+        "s5q3-label": "Question Q3",
+        "s5q3-tag": "How many ...?",
+        "s5q4-label": "Question Q4",
+        "s5q4-tag": "What ...?",
+        "s5q5-label": "Question Q5",
+        "s5q5-tag": "Why ...?",
+        "listen-btn": "Listen",
+        "reveal-ans-btn": "Check Answer",
+        "check-btn": "Check All Answers",
+        "q1-label": "Problem 1",
+        "q1-tag": "Tense: Past Progressive",
+        "q2-label": "Problem 2",
+        "q2-tag": "Tense: Present Progressive",
+        "q3-label": "Problem 3",
+        "q3-tag": "Tense: Present Progressive",
+        "q4-label": "Problem 4",
+        "q4-tag": "Tense: Past Progressive (Plural)",
+        "q5-label": "Problem 5",
+        "q5-tag": "UNIT 21: Simple Past",
+        "q6-label": "Problem 6",
+        "q6-tag": "UNIT 21: Modal (can)",
+        "q7-label": "Problem 7",
+        "q7-tag": "UNIT 22: Present Perfect",
+        "q8-label": "Problem 8",
+        "q8-tag": "UNIT 21: Present (Plural)",
+        "sec7-title": "7. Sentence Structures & Passive: SVOO/SVOC Primer",
+        "sec7-sub": "Mastering Passive Transformations in SVOO and SVOC Sentence Structures",
+        "s7-tab-head": "SVOO & SVOC Learning Station",
+        "s7-tab-1": "Learn",
+        "s7-tab-2": "Exercises",
+        "s7-tab-3": "Arcade",
+        "s7-c1-title": "SVOO (Pattern 4) Passive Voice: 2 Transformations",
+        "s7-c1-desc": "Because SVOO has two objects (Person O1 & Thing O2), two passive patterns can be formed.",
+        "s7-pat-a": "[Pattern A] Person as Subject",
+        "s7-pat-a-sub": "Person + be-verb + Past Participle + Thing + by...",
+        "s7-pat-b": "[Pattern B] Thing as Subject (to / for)",
+        "s7-pat-b-sub": "Thing + be-verb + Past Participle + to/for + Person + by...",
+        "s7-to-verbs": "[Verbs taking TO] (Destination / Transfer)",
+        "s7-to-desc": "Verbs requiring a recipient: give, show, tell, teach, send, lend",
+        "s7-for-verbs": "[Verbs taking FOR] (Preparation / Favor)",
+        "s7-for-desc": "Verbs done for someone: buy, make, cook, find (Person cannot be subject)",
+        "s7-c2-title": "SVOC (Pattern 5) Passive Voice: Preserving Complement (C)",
+        "s7-c2-desc": "In SVOC, Object (O) becomes the passive Subject. Complement (C) stays directly after the past participle.",
+        "s7-filter-label": "Filter by Category:",
+        "s7-game-head": "SVOO & SVOC Speed Challenge",
+        "s7-game-desc": "Select the correct passive form for the active sentence shown within 60 seconds!",
+        "s7-game-start-btn": "Start Game"
+      },
+      ja: {
+        "header-title": "受動態マスターガイド",
+        "header-sub": "Passive Voice Multi-Page Interactive Hub",
+        "nav-1": "1. 基本イメージ",
+        "nav-2": "2. 時制の魔法",
+        "nav-3": "3. 追加情報と前置詞",
+        "nav-4": "4. 動詞・過去分詞バンク",
+        "nav-5": "5. 受動態＆質問",
+        "nav-6": "6. 練習問題",
+        "nav-7": "7. 文型＆受動態(SVOO/SVOC)",
+        "hero-tag": "LESSON GUIDE FOR STUDENTS",
+        "hero-desc": "難しく考える必要はありません。主役（モノ）を最初におき、動作を受ける公式を覚えるだけで、あらゆる時制の受動態を完璧にマスターできます。",
+        "formula-title": "基本の公式",
+        "f-thing": "【モノ】",
+        "f-be": "【be動詞】",
+        "f-pp": "【過去分詞】",
+        "f-extra": "【追加情報】",
+        "sec1-title": "1. 受動態のスタート地点（主役の交代）",
+        "sec1-sub": "Action comes to the THING",
+        "act-label": "能動態 (通常の文)",
+        "act-ex": "🐱 猫が 🐟 魚を食べた。",
+        "act-desc": "「猫」が主語で、自分から行動を起こしています。",
+        "pass-badge": "受動態",
+        "pass-label": "受動態 (受ける文)",
+        "pass-ex": "🐟 魚が 🐱 猫に食べられた。",
+        "pass-desc": "アクションを受けたモノ（目的語）が主役になって文章がスタートします！",
+        "sec2-title": "2. 時制の魔法（be動詞の役割）",
+        "sec2-sub": "Past Participle stays the SAME. Only change the BE-VERB!",
+        "sec2-p1": "受動態で最も大切なポイントは、<b>「時制（いつの話か）」を表現するのは全て be動詞 の仕事</b>だということです。",
+        "sec2-p2": "動作を表す<b>【過去分詞】の形はずっと同じ</b>のまま！be動詞を変えるだけで、どんな時制も自由自在に作ることができます。",
+        "th-tense": "時制 (Tense)",
+        "th-be": "be動詞の形",
+        "th-ex": "例文",
+        "th-meaning": "意味",
+        "t-pres": "現在 (Present)",
+        "t-past": "過去 (Past)",
+        "t-fut": "未来 (Future)",
+        "t-pres-prog": "現在進行形 (Present Progressive)",
+        "t-past-prog": "過去進行形 (Past Progressive)",
+        "t-pres-perf": "現在完了形 (Present Perfect)",
+        "tm-pres": "英語は話されている（日常・事実）",
+        "tm-past": "車は修理された（過去のこと）",
+        "tm-fut": "試合は開催されるだろう",
+        "tm-pres-prog": "車は今、修理されているところだ",
+        "tm-past-prog": "橋は当時、建設されているところだった",
+        "tm-pres-perf": "仕事は完了した（すでに終わった）",
+        "sec3-title": "3. 追加情報（オマケ情報）と前置詞",
+        "sec3-sub": "Connecting details with prepositions",
+        "sec3-p1": "<b>【モノ ＋ be動詞 ＋ 過去分詞】</b> の3つが揃えば、文の骨組み（メイン）は完成です。",
+        "sec3-p2": "そのあとに続くのはすべて<b>「追加情報」</b>です。追加情報を過去分詞にくっつける橋渡しの役割をするのが<b>前置詞</b>です。",
+        "prep-who-head": "誰によって？",
+        "prep-who-ex": "例: by a lot of people",
+        "prep-where-head": "どこで？",
+        "prep-where-ex": "例: all over the world",
+        "prep-when-head": "いつ？",
+        "prep-when-ex": "例: in 1998 / right now",
+        "dismantle-title": "文章の分解例",
+        "d-thing": "<b>[モノ]</b> 古い建物",
+        "d-be": "<b>[be動詞]</b> 過去進行形 (最中だった)",
+        "d-pp": "<b>[過去分詞]</b> 解体する",
+        "d-extra": "<b>[追加情報]</b> 1998年に (前置詞 in)",
+        "sec4-title": "4. 動詞・過去分詞マスターバンク (UNIT 21~23より)",
+        "sec4-sub": "Extracted Verb Reference List for Exercises",
+        "vth-base": "原形 (Base)",
+        "vth-past": "過去形 (Past)",
+        "vth-pp": "過去分詞 (V3)",
+        "vth-meaning": "意味 (Meaning)",
+        "sec5-title": "5. 受動態＆質問 (Passive Voice & Questions)",
+        "sec5-sub": "Mastering 4 Key Question Patterns in Passive Voice",
+        "sec5-p1": "受動態の疑問文は、大きく分けると<b>4つのパターン</b>に分類できます。どのパターンでも、疑問文の末尾には「場所」「時」「理由」などの<b>追加情報（前置詞句）</b>を自由につけ加えることができます。",
+        "qpat-1-badge": "パターン 1",
+        "qpat-1-title": "be動詞で始まる疑問文",
+        "qpat-1-formula": "語順: be動詞 ＋ 目的語(モノ) ＋ 過去分詞 ＋ 〜〜?",
+        "qpat-1-desc": "「〜されましたか？ / 〜されていますか？」と「Yes / No」を尋ねる基本の形です。",
+        "qpat-2-badge": "パターン 2",
+        "qpat-2-title": "What で始まる疑問文",
+        "qpat-2-formula": "語順: What ＋ be動詞 ＋ 過去分詞 ＋ 〜〜?",
+        "qpat-2-desc": "What がそのまま主語（何が〜されたか）になる場合と、「何が〜されましたか？」を聞く場合です。",
+        "qpat-3-badge": "パターン 3",
+        "qpat-3-title": "How much / How many で始まる疑問文",
+        "qpat-3-f1": "a) How much ＋ 目的語 ＋ be動詞(単数) ＋ 過去分詞 ＋ 〜〜?",
+        "qpat-3-f2": "b) How many ＋ 目的語 ＋ be動詞(複数) ＋ 過去分詞 ＋ 〜〜?",
+        "qpat-3-desc": "数量や数（いくつの曲、どれくらいの量）が受動態で扱われたかを質問します。",
+        "qpat-4-badge": "パターン 4",
+        "qpat-4-title": "Who / When / Where / Why で始まる疑問文",
+        "qpat-4-formula": "語順: 疑問詞 ＋ be動詞 ＋ 目的語(モノ) ＋ 過去分詞 ＋ 〜〜?",
+        "qpat-4-desc": "いつ・どこで・なぜ・誰によって行われたかの「詳しい情報」を尋ねる疑問文です。",
+        "qa-examples-title": "疑問文と正しく答える回答例 (Q&A Examples)",
+        "qa-ex-1": "その雑誌は先週あなたに送られましたか？ ➔ はい、送られました。/ いいえ、送られていません。",
+        "qa-ex-2": "その店から何が盗まれましたか？ ➔ いくつかの高価な時計が盗まれました。",
+        "qa-ex-3": "パーティーでは何曲歌われましたか？ ➔ 5曲歌われました。",
+        "qa-ex-4": "その美しい鳥はどこで捕まえられましたか？ ➔ 湖の近くの森で捕まえられました。",
+        "sec5-prob-title": "セクション5 小テスト（疑問文の穴埋め5問）",
+        "sec5-check-btn": "疑問文の回答を全判定",
+        "s5q1-label": "疑問文 Q1",
+        "s5q1-tag": "When ...?",
+        "s5q2-label": "疑問文 Q2",
+        "s5q2-tag": "Where ...?",
+        "s5q3-label": "疑問文 Q3",
+        "s5q3-tag": "How many ...?",
+        "s5q4-label": "疑問文 Q4",
+        "s5q4-tag": "What ...?",
+        "s5q5-label": "疑問文 Q5",
+        "s5q5-tag": "Why ...?",
+        "listen-btn": "音声を聞く",
+        "reveal-ans-btn": "解答確認",
+        "check-btn": "全ての解答をチェック",
+        "q1-label": "問題 1",
+        "q1-tag": "時制: 過去進行形",
+        "q2-label": "問題 2",
+        "q2-tag": "時制: 現在進行形",
+        "q3-label": "問題 3",
+        "q3-tag": "時制: 現在進行形",
+        "q4-label": "問題 4",
+        "q4-tag": "時制: 過去進行形 (複数)",
+        "q5-label": "問題 5",
+        "q5-tag": "UNIT 21: 基本過去形",
+        "q6-label": "問題 6",
+        "q6-tag": "UNIT 21: 助動詞 (can)",
+        "q7-label": "問題 7",
+        "q7-tag": "UNIT 22: 現在完了形",
+        "q8-label": "問題 8",
+        "q8-tag": "UNIT 21: 現在形 (複数)",
+        "sec7-title": "7. 文型＆受動態：SVOO/SVOCプライマー",
+        "sec7-sub": "Mastering Passive Transformations in SVOO and SVOC Sentence Structures",
+        "s7-tab-head": "SVOO & SVOC 学習ステーション",
+        "s7-tab-1": "解説 (Learn)",
+        "s7-tab-2": "演習 (Exercises)",
+        "s7-tab-3": "ゲーム (Arcade)",
+        "s7-c1-title": "SVOO (第4文型) の受動態：2つのパターン",
+        "s7-c1-desc": "SVOO文型には「人 (O1)」と「物 (O2)」の2つの目的語があるため、どちらを主語にするかで2種類の受動態を作成できます。",
+        "s7-pat-a": "【パターン A】「人」を主語にする",
+        "s7-pat-a-sub": "人 ＋ be動詞 ＋ 過去分詞 ＋ 物 ＋ by...",
+        "s7-pat-b": "【パターン B】「物」を主語にする (to / for)",
+        "s7-pat-b-sub": "物 ＋ be動詞 ＋ 過去分詞 ＋ to/for ＋ 人 ＋ by...",
+        "s7-to-verbs": "【to を使う動詞】 (到達・移動)",
+        "s7-to-desc": "相手への到達が必須の動詞: give, show, tell, teach, send, lend",
+        "s7-for-verbs": "【for を使う動詞】 (準備・調達)",
+        "s7-for-desc": "相手のために行う動詞: buy, make, cook, find (※人を主語にする受動態は原則不可)",
+        "s7-c2-title": "SVOC (第5文型) の受動態：補語(C)の残し方",
+        "s7-c2-desc": "SVOC文型では目的語(O)が受動態の主語になります。補語(C)は形を変えずに過去分詞の直後にそのまま残ります。",
+        "s7-filter-label": "カテゴリー別問題演習:",
+        "s7-game-head": "SVOO & SVOC 受動態瞬発チャレンジ",
+        "s7-game-desc": "提示される能動態の英文に対する「正しい受動態の文」を60秒以内に正確に選択してください！",
+        "s7-game-start-btn": "ゲームをスタート (Start Game)"
+      }
+    };
+
+    // Navigation Page Switching Function
+    function switchMainPage(pageId) {
+      // Hide all page views
+      const views = document.querySelectorAll('.page-view');
+      views.forEach(view => view.classList.add('hidden'));
+
+      // Remove active tab styles
+      const tabBtns = document.querySelectorAll('#nav-tabs button');
+      tabBtns.forEach(btn => {
+        btn.className = "px-3.5 py-2 rounded-xl transition whitespace-nowrap text-slate-700 hover:bg-slate-200";
+      });
+
+      // Show selected page view
+      const targetPage = document.getElementById(`page-${pageId}`);
+      if (targetPage) {
+        targetPage.classList.remove('hidden');
+      }
+
+      // Highlight target nav tab
+      const targetBtn = document.getElementById(`tab-btn-${pageId}`);
+      if (targetBtn) {
+        targetBtn.className = "px-3.5 py-2 rounded-xl transition whitespace-nowrap bg-teal-600 text-white shadow-sm font-bold";
+      }
+
+      // Smooth scroll to top of page
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Single Question Reveal Answer Logic
+    function revealSingleAnswer(qId, targetAnswer, explanationStr) {
+      const input = document.getElementById(qId + '-input');
+      const feedback = document.getElementById(qId + '-feedback');
+      
+      if (!feedback) return;
+
+      const val = input ? input.value.trim().toLowerCase().replace(/\s+/g, ' ') : '';
+      const target = targetAnswer.toLowerCase();
+
+      feedback.classList.remove('hidden', 'bg-emerald-50', 'border-emerald-300', 'text-emerald-900', 'bg-amber-50', 'border-amber-300', 'text-amber-900');
+
+      if (val === target) {
+        feedback.classList.add('bg-emerald-50', 'border-emerald-300', 'text-emerald-900');
+        feedback.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i><b>正解です！ (${targetAnswer})</b> — ${explanationStr}`;
+      } else {
+        feedback.classList.add('bg-amber-50', 'border-amber-300', 'text-amber-900');
+        feedback.innerHTML = `<i class="fa-solid fa-key text-amber-700 mr-2"></i><b>模範解答:</b> <span class="font-mono font-bold text-amber-950">${targetAnswer}</span> — ${explanationStr}`;
+      }
+    }
+
+    // Audio Playback Map & Function
+    const audioSentences = {
+      s5q1: "When was this picture painted?",
+      s5q2: "Where was the beautiful bird caught?",
+      s5q3: "How many songs were sung at the party?",
+      s5q4: "What was stolen from that store?",
+      s5q5: "Why were they interviewed on TV?",
+      q1: "The bridge was being built at that time.",
+      q2: "My father's car is being repaired now.",
+      q3: "His new novel is being written now.",
+      q4: "The old trees were being cut down.",
+      q5: "This temple was built in the Edo period.",
+      q6: "A lot of stars can be seen at night here.",
+      q7: "The cake has already been eaten by Tom.",
+      q8: "English and French are spoken in Canada."
+    };
+
+    function playAudio(qKey) {
+      const text = audioSentences[qKey];
+      if (!text) return;
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel(); // Stop any active audio
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.85; // Slightly slower for language learners
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    // Section 5 Batch Answer Checker
+    const sec5Questions = [
+      { id: 's5q1', target: 'was painted', explanation: 'Whenの疑問文なので [was + 主語 + 過去分詞 painted] となります。' },
+      { id: 's5q2', target: 'was caught', explanation: 'Whereの疑問文なので [was + 主語 + 過去分詞 caught] となります。' },
+      { id: 's5q3', target: 'were sung', explanation: '複数名詞 songs に応じて [were + 過去分詞 sung] となります。' },
+      { id: 's5q4', target: 'was stolen', explanation: 'Whatが主語になる疑問文なので [was stolen] となります。' },
+      { id: 's5q5', target: 'were they interviewed', explanation: 'Whyの疑問文で複数主語 they なので [were they interviewed] となります。' }
+    ];
+
+    function checkSec5Answers() {
+      sec5Questions.forEach(q => {
+        revealSingleAnswer(q.id, q.target, q.explanation);
+      });
+    }
+
+    // Section 6 Batch Answer Checker
+    const questions = [
+      { id: 'q1', target: 'was being built', explanation: '過去進行形（単数 The bridge）なので「was being built」となります。' },
+      { id: 'q2', target: 'is being repaired', explanation: '現在進行形（単数 car）なので「is being repaired」となります。' },
+      { id: 'q3', target: 'is being written', explanation: '現在進行形（単数 novel）＋ writeの過去分詞「written」で「is being written」となります。' },
+      { id: 'q4', target: 'were being cut', explanation: '過去進行形（複数 trees）＋ cutの過去分詞「cut」で「were being cut」となります。' },
+      { id: 'q5', target: 'was built', explanation: '過去形（単数 temple）なので「was built」となります。' },
+      { id: 'q6', target: 'can be seen', explanation: '助動詞 + be + 過去分詞 の公式で「can be seen」となります。' },
+      { id: 'q7', target: 'been eaten', explanation: '現在完了形の受動態 has been + 過去分詞「been eaten」となります。' },
+      { id: 'q8', target: 'are spoken', explanation: '複数主語（English and French）に応じた現在形受動態「are spoken」となります。' }
+    ];
+
+    function checkAllAnswers() {
+      questions.forEach(q => {
+        revealSingleAnswer(q.id, q.target, q.explanation);
+      });
+    }
+
+    // Search function for Verb Bank
+    function filterVerbs() {
+      const input = document.getElementById('verbSearch');
+      const filter = input.value.toLowerCase();
+      const table = document.getElementById('verbTable');
+      const tr = table.getElementsByTagName('tr');
+
+      for (let i = 1; i < tr.length; i++) {
+        const textContent = tr[i].textContent || tr[i].innerText;
+        if (textContent.toLowerCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+
+    // Language Toggle logic
+    function toggleLanguage() {
+      currentLang = currentLang === 'ja' ? 'en' : 'ja';
+      const langBtnText = document.getElementById('lang-text');
+      if (langBtnText) langBtnText.innerText = currentLang === 'ja' ? 'English' : '日本語';
+
+      const dict = translations[currentLang];
+      if (!dict) return;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+    }
+
+    // --- Section 7 SVOO & SVOC Dataset and Logic ---
+    const s7ExerciseData = [
+      {
+        id: 's7ex1',
+        category: 'svoo',
+        title_ja: 'SVOOの受動態 (buy)',
+        title_en: 'SVOO Passive (buy)',
+        prompt: 'My mother bought me a big birthday cake.',
+        instruction_ja: '「a big birthday cake」を主語にした受動態の文にしなさい。',
+        instruction_en: 'Rewrite into passive starting with "A big birthday cake".',
+        target: 'A big birthday cake was bought for me by my mother.',
+        explanation_ja: 'buyは「for」をとる動詞です。「A big birthday cake was bought for me by my mother.」となります。',
+        explanation_en: 'The verb "buy" takes "for". Form: A big birthday cake was bought for me by my mother.'
+      },
+      {
+        id: 's7ex2',
+        category: 'svoo',
+        title_ja: 'SVOOの受動態 (show)',
+        title_en: 'SVOO Passive (show)',
+        prompt: 'Nana showed me some pictures.',
+        instruction_ja: '「I」を主語にした受動態の文にしなさい。',
+        instruction_en: 'Rewrite into passive starting with "I".',
+        target: 'I was shown some pictures by Nana.',
+        explanation_ja: 'showは人を主語に受動態が作れます。「I was shown some pictures by Nana.」となります。',
+        explanation_en: '"show" permits Person as Subject: I was shown some pictures by Nana.'
+      },
+      {
+        id: 's7ex3',
+        category: 'svoc',
+        title_ja: 'SVOCの受動態 (name)',
+        title_en: 'SVOC Passive (name)',
+        prompt: 'My father named me Yuka.',
+        instruction_ja: '「I」を主語にした受動態の文にしなさい。',
+        instruction_en: 'Rewrite into passive starting with "I".',
+        target: 'I was named Yuka by my father.',
+        explanation_ja: '補語Yukaは動詞の直後にそのまま残ります。「I was named Yuka by my father.」となります。',
+        explanation_en: 'Complement "Yuka" remains right after verb: I was named Yuka by my father.'
+      },
+      {
+        id: 's7ex4',
+        category: 'svoc',
+        title_ja: 'SVOCの受動態 (left)',
+        title_en: 'SVOC Passive (left)',
+        prompt: 'Mike left the door open.',
+        instruction_ja: '「The door」を主語にした受動態の文にしなさい。',
+        instruction_en: 'Rewrite into passive starting with "The door".',
+        target: 'The door was left open by Mike.',
+        explanation_ja: '補語openが動詞直後に残ります。「The door was left open by Mike.」となります。',
+        explanation_en: 'Complement "open" stays right after past participle: The door was left open by Mike.'
+      },
+      {
+        id: 's7ex5',
+        category: 'idiom',
+        title_ja: '群動詞の受動態 (take care of)',
+        title_en: 'Phrasal Verb Passive (take care of)',
+        prompt: 'Mrs. Smith takes care of our cats during our summer vacation.',
+        instruction_ja: '「Our cats」を主語にした受動態の文にしなさい。',
+        instruction_en: 'Rewrite starting with "Our cats".',
+        target: 'Our cats are taken care of by Mrs. Smith during our summer vacation.',
+        explanation_ja: 'take care of はまとまって1つの動詞とみなすため「are taken care of by」となります。',
+        explanation_en: 'Phrasal verbs stay connected: Our cats are taken care of by Mrs. Smith...'
+      }
+    ];
+
+    function switchS7Tab(tabName) {
+      ['s7-btn-learn', 's7-btn-practice', 's7-btn-game'].forEach(bId => {
+        const btn = document.getElementById(bId);
+        if (btn) {
+          btn.className = "px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition font-medium";
+        }
+      });
+
+      document.getElementById('s7-tab-sec-learn').classList.add('hidden');
+      document.getElementById('s7-tab-sec-practice').classList.add('hidden');
+      document.getElementById('s7-tab-sec-game').classList.add('hidden');
+
+      if (tabName === 's7-learn') {
+        document.getElementById('s7-btn-learn').className = "px-4 py-2 rounded-lg bg-indigo-600 text-white shadow-sm transition font-bold";
+        document.getElementById('s7-tab-sec-learn').classList.remove('hidden');
+      } else if (tabName === 's7-practice') {
+        document.getElementById('s7-btn-practice').className = "px-4 py-2 rounded-lg bg-indigo-600 text-white shadow-sm transition font-bold";
+        document.getElementById('s7-tab-sec-practice').classList.remove('hidden');
+        renderS7PracticeQuestions('all');
+      } else if (tabName === 's7-game') {
+        document.getElementById('s7-btn-game').className = "px-4 py-2 rounded-lg bg-indigo-600 text-white shadow-sm transition font-bold";
+        document.getElementById('s7-tab-sec-game').classList.remove('hidden');
+      }
+    }
+
+    function filterS7Practice(category) {
+      ['all', 'svoo', 'svoc', 'idiom'].forEach(cat => {
+        const btn = document.getElementById(`s7-flt-${cat}`);
+        if (btn) btn.className = "px-3 py-1 bg-white text-slate-700 border border-slate-300 rounded-lg text-xs hover:text-indigo-600";
+      });
+      const activeBtn = document.getElementById(`s7-flt-${category}`);
+      if (activeBtn) activeBtn.className = "px-3 py-1 bg-indigo-600 text-white rounded-lg text-xs font-bold shadow-sm";
+      renderS7PracticeQuestions(category);
+    }
+
+    function renderS7PracticeQuestions(filterCategory = 'all') {
+      const container = document.getElementById('s7-exercises-list');
+      container.innerHTML = '';
+
+      const items = filterCategory === 'all' 
+        ? s7ExerciseData 
+        : s7ExerciseData.filter(x => x.category === filterCategory);
+
+      items.forEach((q, idx) => {
+        const card = document.createElement('div');
+        card.className = "bg-white border border-slate-200 rounded-2xl p-5 space-y-3 shadow-sm";
+
+        const title = currentLang === 'ja' ? q.title_ja : q.title_en;
+        const instr = currentLang === 'ja' ? q.instruction_ja : q.instruction_en;
+        const expl = currentLang === 'ja' ? q.explanation_ja : q.explanation_en;
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-indigo-700 uppercase tracking-widest">Q${idx + 1} • ${q.category.toUpperCase()}</span>
+            <span class="text-slate-500 font-semibold">${title}</span>
+          </div>
+          <div class="font-mono text-sm text-amber-900 bg-amber-50/70 p-3 rounded-xl border border-amber-200 font-bold">
+            Active: ${q.prompt}
+          </div>
+          <p class="text-xs text-slate-700 font-medium">${instr}</p>
+          <div class="space-y-2">
+            <input type="text" id="${q.id}-input" placeholder="${currentLang === 'ja' ? '解答を入力...' : 'Type sentence here...'}" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-indigo-600 font-mono shadow-inner font-bold">
+            <div class="flex justify-end gap-2">
+              <button onclick="revealSingleAnswer('${q.id}', '${q.target.replace(/'/g, "\\'")}', '${expl.replace(/'/g, "\\'")}')" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition flex items-center gap-1">
+                <i class="fa-solid fa-key text-teal-600"></i> <span data-i18n="reveal-ans-btn">解答確認</span>
+              </button>
+            </div>
+          </div>
+          <div id="${q.id}-feedback" class="hidden text-xs rounded-xl p-3 border"></div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Section 7 Arcade Game Logic
+    const s7GameQuestions = [
+      {
+        category: 'SVOO (to-type)',
+        active: 'Mr. Evans teaches us English.',
+        options: [
+          'We are taught English by Mr. Evans.',
+          'English is taught for us by Mr. Evans.',
+          'We were taught English by Mr. Evans.',
+          'Us are taught English by Mr. Evans.'
+        ],
+        correct: 0
+      },
+      {
+        category: 'SVOO (for-type)',
+        active: 'Mary made me this dress.',
+        options: [
+          'I was made this dress by Mary.',
+          'This dress was made for me by Mary.',
+          'This dress is made to me by Mary.',
+          'This dress made for me by Mary.'
+        ],
+        correct: 1
+      },
+      {
+        category: 'SVOC Pattern',
+        active: 'They call the girl Angela.',
+        options: [
+          'The girl called Angela by them.',
+          'Angela is called the girl by them.',
+          'The girl is called Angela.',
+          'The girl was called Angela.'
+        ],
+        correct: 2
+      },
+      {
+        category: 'Phrasal Verb',
+        active: 'Two young women talked to me.',
+        options: [
+          'I was talked to by two young women.',
+          'I was talked by two young women.',
+          'Me was talked to by two young women.',
+          'I talked to two young women.'
+        ],
+        correct: 0
+      },
+      {
+        category: 'SVOC Pattern',
+        active: 'Mike left the door open.',
+        options: [
+          'The door was left open by Mike.',
+          'The door left open by Mike.',
+          'Open was left the door by Mike.',
+          'The door is left open by Mike.'
+        ],
+        correct: 0
+      }
+    ];
+
+    let s7Score = 0;
+    let s7Streak = 0;
+    let s7TimeLeft = 60;
+    let s7TimerId = null;
+    let s7QIdx = 0;
+
+    function startS7Game() {
+      s7Score = 0;
+      s7Streak = 0;
+      s7TimeLeft = 60;
+      s7QIdx = 0;
+
+      document.getElementById('s7-game-score').innerText = s7Score;
+      document.getElementById('s7-game-streak').innerText = `${s7Streak} 🔥`;
+      document.getElementById('s7-game-timer').innerText = `${s7TimeLeft}s`;
+
+      document.getElementById('s7-g-start').classList.add('hidden');
+      document.getElementById('s7-g-end').classList.add('hidden');
+      document.getElementById('s7-g-play').classList.remove('hidden');
+
+      loadS7Question();
+
+      clearInterval(s7TimerId);
+      s7TimerId = setInterval(() => {
+        s7TimeLeft--;
+        document.getElementById('s7-game-timer').innerText = `${s7TimeLeft}s`;
+        if (s7TimeLeft <= 0) {
+          endS7Game();
+        }
+      }, 1000);
+    }
+
+    function loadS7Question() {
+      if (s7QIdx >= s7GameQuestions.length) {
+        s7QIdx = 0;
+      }
+      const q = s7GameQuestions[s7QIdx];
+      document.getElementById('s7-g-cat').innerText = q.category;
+      document.getElementById('s7-g-qtext').innerText = q.active;
+
+      const optsContainer = document.getElementById('s7-g-options');
+      optsContainer.innerHTML = '';
+
+      q.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.className = "w-full text-left p-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 transition text-slate-100 flex items-center justify-between";
+        btn.onclick = () => handleS7Answer(idx);
+        btn.innerHTML = `<span>${opt}</span><i class="fa-solid fa-chevron-right text-xs text-indigo-400"></i>`;
+        optsContainer.appendChild(btn);
+      });
+    }
+
+    function handleS7Answer(selected) {
+      const q = s7GameQuestions[s7QIdx];
+      if (selected === q.correct) {
+        s7Streak++;
+        s7Score += 100 + (s7Streak * 20);
+        document.getElementById('s7-game-score').innerText = s7Score;
+        document.getElementById('s7-game-streak').innerText = `${s7Streak} 🔥`;
+      } else {
+        s7Streak = 0;
+        document.getElementById('s7-game-streak').innerText = `0 🔥`;
+      }
+      s7QIdx++;
+      loadS7Question();
+    }
+
+    function endS7Game() {
+      clearInterval(s7TimerId);
+      document.getElementById('s7-g-play').classList.add('hidden');
+      document.getElementById('s7-g-end').classList.remove('hidden');
+      document.getElementById('s7-g-final-score').innerText = s7Score;
+    }
+
+    // Initialize Default Page View
+    window.onload = function() {
+      switchMainPage('concept');
+    };
+  </script>
+
+</body>
+</html>
